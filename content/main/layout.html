@@ -1,0 +1,259 @@
+{%extends display.mvc%}
+
+
+
+{%block body%}
+{{block('pageHeader')}}
+
+ <div class="cn">
+  <div class="wrapper" data-xhr='wrapper'>
+{%block content%}
+   <div class="pageData">
+{%block pageTitle%}
+{%if page.title%}
+    <h2 class="pageTitle"><a href="{{url.pwd}}" class="sB3">{{page.title}}</a></h2>
+{%endif%}
+{%endblock%}
+{%block pageData%}{%endblock%}
+  </div>
+{%endblock%}
+ </div>
+</div>
+
+{{block('pageFooter')}}
+{%endblock%}
+
+
+
+
+
+{%block pageHeader%}
+ <header id='sHeader' data-scroll>
+  <div class="cn">
+    <div class="f">
+      <div class="cauto">
+        <a href="{{url.here}}" class="brand">
+          <img src="{{url.site}}/static/images/homepage-v3/header-logo-{{lang.current}}.png" alt='{{site.title}} | {{site.desc}}' title='{{site.desc}}'>
+          <h1>{{site.title}}</h1>
+          <h2>{{site.desc}}</h2>
+        </a>
+      </div>
+      <div class="c p0">
+       {{langList({'html':true, 'all': true})}}
+{%if hadithList%}
+       <div class="hadith m0 s0"><span class="typed"></span>
+        <div id="typed-strings" class="hide">
+{%for key, myHadith in hadithList%}
+          <h4>{{myHadith.desc}}</h4>
+{%endfor%}
+        </div>
+       </div>
+{%endif%}
+      </div>
+    </div>
+  </div>
+ </header>
+ <nav id="sHeaderNav" class="p0">
+  <div class="cn">
+   <div class="headerLine f">
+    <div class="mainNav sB1 c s0">
+     <a href="{{url.here}}"><span class="sf-home pRa5 fs12"></span>{%trans "Homepage"%}</a>
+     <a href="{{url.here}}/about">{%trans "About"%}</a>
+     <a href="{{url.here}}/blog">{%trans "News"%}</a>
+     <a href="{{url.here}}/wiki">{%trans "Khadije Wiki"%}</a>
+     <a href="{{url.kingdom}}/a" data-direct>{%trans "Services"%}</a>
+     <a href="{{url.kingdom}}/delneveshte" data-direct>{%trans "Self expressions"%}</a>
+    </div>
+    <div class="mainNavMobile sB1 c0 sauto" id="sidenavHandler">
+      <span class="sf-ellipsis-v"></span>
+    </div>
+    <div class="donate sB2 cauto lightPulse">
+     <a href="{{url.here}}/donate">{%trans "Donate"%}</a>
+    </div>
+   </div>
+  </div>
+ </nav>
+ <aside id="sidebar">
+    <nav>
+      <ul>
+        <li class="title">{{site.title}}</li>
+       <li><a tabindex='-1' href="{{url.here}}"><span class="sf-home pRa5"></span>{%trans "Homepage"%}</a></li>
+       <li><a tabindex='-1' href="{{url.here}}/about">{%trans "About"%}</a></li>
+       <li><a tabindex='-1' href="{{url.here}}/blog">{%trans "News"%}</a></li>
+       <li><a tabindex='-1' href="{{url.kingdom}}/a" data-direct>{%trans "Services"%}</a></li>
+       <li><a tabindex='-1' href="{{url.kingdom}}/delneveshte" data-direct>{%trans "Self expressions"%}</a></li>
+       <li class="mT25"><a tabindex='-1' href="{{url.here}}/donate" class="donate"><span class="sf-gift pRa5 fs20"></span>{%trans "Donate"%}</a></li>
+      </ul>
+    </nav>
+ </aside>
+{%endblock%}
+
+
+
+{%block pageFooter%}
+<footer id='sFooter'>
+  <a href="{{url.here}}" class="brand p0" title='{{site.desc}}'>
+    <img src="{{url.site}}/static/images/logo/khadije.png" alt='{{site.desc}}'>
+    <h2>{{site.title}}</h2>
+  </a>
+
+  <div class="cn">
+    <div class="f p0">
+      <div class="c6 s12 pRa25">
+        <div class="f">
+          <div class="c">
+            <p>{%trans "Khadijah cultural and artistic charity was established in 2015 with the purpose of developing the Ahlul-Bayt <small>peace be upon them</small> pilgrimage culture and with two priorities of Ahlul-Bayt pilgrimage and the revival of forgotten traditions such as sacrifice, giving food on Ghadir day and ... has continued its activities."%}
+            </p>
+{%if login.id%}
+          <div class="pLR10">
+            <a href="{{url.kingdom}}/a" data-direct class="btn outline primary pRa10">{%trans "User Panel"%}</a>
+          </div>
+{%else%}
+          <div class="pLR10">
+            <a href="{{url.kingdom}}/enter" data-direct class="btn outline primary pRa10">{%trans "Enter"%}</a>
+            <a href="{{url.kingdom}}/enter/signup" data-direct class="btn outline primary pRa10">{%trans "Signup in Khadije charity"%}</a>
+          </div>
+{%endif%}
+
+          </div>
+          <div class="cauto">
+{%if lang.current =='fa' and false%}
+           <div class="enamad">
+            <a href="#enamad" id='enamad'><img src="{{url.site}}/static/images/cert/enamad1.png" alt='{%trans "Enamad"%}' onclick='window.open("https://trustseal.enamad.ir/Verify.aspx?id=70527&p=qgwldrfsyncrwkynqgwl", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")'></a>
+           </div>
+{%endif%}
+          </div>
+        </div>
+
+        {{block('pageSocialLinks')}}
+      </div>
+      <div class="c3 s6 pRa10">
+        <h3>{{site.title}}</h3>
+        <nav>
+          <a href="{{url.here}}/about">{%trans "About"%}</a>
+          <a href="{{url.here}}/mission">{%trans "Mission"%}</a>
+          <a href="{{url.here}}/vision">{%trans "Vision"%}</a>
+          <a href="{{url.here}}/honors">{%trans "Honors"%}</a>
+          <a href="{{url.here}}/blog">{%trans "News"%}</a>
+          <a href="{{url.here}}/contact">{%trans "Contact"%}</a>
+        </nav>
+      </div>
+      <div class="c3 s6">
+        <h3>{%trans "Encyclopedia of Hazrat Khadijah"%}</h3>
+        <nav>
+          <a href="{{url.here}}/wiki/biography">{%trans "Biography"%}</a>
+          <a href="{{url.here}}/wiki/bibliography">{%trans "Bibliography"%}</a>
+          <a href="{{url.here}}/wiki/sites">{%trans "Specialized sites"%}</a>
+          <a href="{{url.here}}/mylovestory">{%trans "My love story book"%}</a>
+        </nav>
+      </div>
+    </div>
+    <hr class="p0">
+    <div class="f p0">
+      <div class="c s6">
+        <h3>{%trans "Requests"%}</h3>
+        <nav>
+          <a href="{{url.kingdom}}/a/trip" data-direct>{%trans "Individual registration"%}</a>
+          <a href="{{url.kingdom}}/a/group" data-direct>{%trans "Group registration"%}</a>
+          <a href="{{url.here}}/servant">{%trans "Servants registration"%}</a>
+        </nav>
+      </div>
+{%if lang.current == 'fa'%}
+      <div class="c s6">
+        <h3>{%trans "Services"%}</h3>
+        <nav>
+          <a href="{{url.kingdom}}/a/consulting" data-direct>{%trans "Consulting service"%}</a>
+          <a href="{{url.kingdom}}/a/health" data-direct>{%trans "Health service"%}</a>
+        </nav>
+      </div>
+{%endif%}
+      <div class="c s6">
+        <h3>{%trans "Other services"%}</h3>
+        <nav>
+          <a href="{{url.kingdom}}/a/representation" data-direct>{%trans "Deputy pilgrimage"%}</a>
+          <a href="{{url.kingdom}}/delneveshte" data-direct>{%trans "Delneveshteha"%}</a>
+          <a href="{{url.here}}/tag/lottory">{%trans "Balloting names"%}</a>
+{% if false%}
+          <a href="{{url.here}}/live">{%trans "Virtual pilgrimage"%}</a>
+{% endif%}
+        </nav>
+      </div>
+      <div class="c s6">
+        <h3>{%trans "Help"%}</h3>
+        <nav>
+          <a href="{{url.here}}/donate">{%trans "Donate"%}</a>
+          <a href="{{url.here}}/doners">{%trans "Doners"%}</a>
+        </nav>
+      </div>
+      <div class="c s6">
+        <h3>{%trans "Other Languages"%}</h3>
+        {{langList({'html':true, 'all': true})}}
+      </div>
+    </div>
+    <div class="f" id='copyright'>
+      <div class="c">
+        {{page.copyright | raw}}
+      </div>
+      <div class="cauto os s12 txtRa" id='ermile'><a href="https://ermile.com" target='_blank' title='{%trans "Software Solution Designer"%}'>{%trans "Developed by Ermile"%}</a></div>
+    </div>
+  </div>
+</footer>
+{%endblock%}
+
+
+
+{%block pageSocialLinks%}
+<nav class="shareC txtRa">
+{%if social.twitter%}
+  <a data-direct target='_blank' href="https://twitter.com/{{social.twitter}}" class="sprite-twitter" title='{%trans "Twitter"%}'>{{site.title}} twitter</a>
+{%endif%}
+{%if social.facebook%}
+  <a data-direct target='_blank' href="https://www.facebook.com/{{social.facebook}}" class="sprite-facebook" title='{%trans "Facebook"%}'>{{site.title}} facebook</a>
+{%endif%}
+{%if social.googleplus%}
+  <a data-direct target='_blank' href="https://plus.google.com/{{social.googleplus}}" class="sprite-googleplus">{{site.title}} google+</a>
+{%endif%}
+{%if social.telegram%}
+  <a data-direct target='_blank' href="https://t.me/{{social.telegram}}" class="sprite-telegram" title='{%trans "Telegram"%}'>{{site.title}} telegram</a>
+{%endif%}
+{%if social.instagram%}
+  <a data-direct target='_blank' href="https://instagram.com/{{social.instagram}}" class="sprite-instagram" title='{%trans "Instagram"%}'>{{site.title}} instagram</a>
+{%endif%}
+{%if social.linkedin%}
+  <a data-direct target='_blank' href="https://www.linkedin.com/{{social.linkedin}}" class="sprite-linkedin">{{site.title}} linkedin</a>
+{%endif%}
+{%if social.aparat%}
+  <a data-direct target='_blank' href="https://www.aparat.com/{{social.aparat}}" class="sprite-aparat" title='{%trans "Aparat"%}'>
+  </a>
+{%endif%}
+  <a data-direct target='_blank' href="https://eitaa.com/mhkhadije" class="sprite-eitaa" title='{%trans "Eitaa"%}'>
+  </a>
+  <a data-direct target='_blank' href="https://sapp.ir/mhkhadije" class="sprite-sapp" title='{%trans "Soroush App"%}'>
+  </a>
+</nav>
+{%endblock%}
+
+
+
+{%block facebook%}
+ <meta property ="og:title"                content="{{pageTitle}}"/>
+ <meta property ="og:description"          content="{{pageDesc}}"/>
+ <meta property ="og:url"                  content="{{url.pwd}}"/>
+ <meta property ="og:type"                 content="website"/>
+{%block facebookImages%}
+{%if lang.current == 'fa'%}
+ <meta property ='og:locale'               content='fa_IR'/>
+{%endif%}
+{%if lang.current == 'fa'%}
+ <meta property ="og:image"                content="{{url.site}}/static/images/share/og-wide-fa.png"/>
+{%else%}
+ <meta property ="og:image"                content="{{url.site}}/static/images/share/og-wide-en.png"/>
+{%endif%}
+ <meta property ="og:image:width"          content="525"/>
+ <meta property ="og:image:height"         content="275"/>
+ <meta property ="og:image"                content="{{url.site}}/static/images/share/og-square.png"/>
+ <meta property ="og:image:width"          content="512"/>
+ <meta property ="og:image:height"         content="512"/>
+{%endblock%}
+{%endblock%}
+

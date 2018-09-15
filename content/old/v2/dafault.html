@@ -1,0 +1,124 @@
+{%extends display.main%}
+
+
+{%block page%}
+
+   <nav class="breadcrumb block msg hide" data-xhr="breadcrumb" tabindex='-1' data-step='4' data-intro='{%trans "View your current location and navigate to parent of it"%}' data-position='bottom'>
+   {{breadcrumb(null, true) | raw}}
+   </nav>
+
+{%if datarow.type == 'post' or datarow.type == 'page'%}
+  {{block('posts')}}
+{%else%}
+  {{block('terms')}}
+{%endif%}
+
+{%endblock%}
+
+
+
+{%block posts%}
+  <section class="postPreview">
+    <h2>{{datarow.title | raw}}</h2>
+    <h3 class="fs12">{{datarow.subtitle | raw}}</h3>
+{%if datarow.meta.thumb%}
+    <img src="{{datarow.meta.thumb}}" alt="{{datarow.title | raw}}" class="floatRa thumb">
+{%endif%}
+
+    {{datarow.content | raw}}
+    {{block('imagegallery')}}
+
+
+    <div class="tagBox msg">
+      {{tags({"format" : 'html'})}}
+    </div>
+
+{%if datarow.datemodified%}
+    <div class='msg f'>
+      <div class="c">{{datarow.publishdate | tdate('d F Y - H:i')}}</div>
+      <div class="cauto os">ویرایش شده در <time datetime="{{datarow.datemodified}}">{{datarow.datemodified | sdate}}</time></div>
+    </div>
+{%endif%}
+  </section>
+{%endblock%}
+
+
+
+{%block terms%}
+    {{block('datatablePosts')}}
+{%endblock%}
+
+
+
+{%block imagegallery%}
+  {%if datarow.meta.gallery%}
+    <div id="lightgallery">
+      {%for key, myUrl in datarow.meta.gallery%}
+        {%if myUrl ends with '.jpg' or myUrl ends with '.png' or myUrl ends with '.gif'%}
+          <a data-action href="{{myUrl}}"><img src="{{myUrl}}" alt="{{datarow.title | raw}}"></a>
+        {%endif%}
+      {%endfor%}
+    </div>
+  {%endif%}
+
+
+    <div class="gallery2">
+      {%for key, myUrl in datarow.meta.gallery%}
+        {%if myUrl ends with '.mp4' %}
+        <video controls>
+            <source src="{{myUrl}}" type="video/mp4">
+        </video>
+        {%elseif myUrl ends with '.mp3' %}
+          <audio controls><source src="{{myUrl}}" type="audio/mpeg"></audio>
+        {%elseif myUrl ends with '.pdf' %}
+        <a href="{{myUrl}}" class="btn pA25">PDF</a>
+        {%else%}
+        {%endif%}
+      {%endfor%}
+    </div>
+
+{%endblock%}
+
+
+{%block datatablePosts%}
+
+{%if datarow.type == 'cat'%}
+
+  {%set myPostByThisCat = posts({"cat" : datarow.slug})%}
+
+{%elseif datarow.type == 'tag' %}
+
+  {%set myPostByThisCat = posts({"tag" : datarow.slug})%}
+
+{%endif%}
+
+{%if myPostByThisCat %}
+<article class="postListPreview">
+  {%for key, value in myPostByThisCat%}
+    <section class="f">
+{%if value.meta.thumb%}
+      <div class="cauto s12 pRa10 txtC">
+        <a href="{{value.url}}"><img src="{{value.meta.thumb}}" alt="{{value.title}}" width="150px"></a>
+      </div>
+{%endif%}
+      <div class="c s12">
+        <h3><a href="{{value.url}}">{{value.title}}</a></h3>
+        <p>{{value.excerpt}}</p>
+      </div>
+    </section>
+  {%endfor%}
+</article>
+{%endif%}
+
+
+{%endblock%}
+
+
+{%block foot_js%}
+  <link rel="stylesheet" href="{{url.site}}/static/lightgallery/css/lightgallery.min.css">
+  <script src="{{url.site}}/static/lightgallery/js/lightgallery.min.js"></script>
+  <script>
+    lightGallery(document.getElementById('lightgallery'));
+</script>
+{%endblock%}
+
