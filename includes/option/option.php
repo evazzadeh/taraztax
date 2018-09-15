@@ -46,7 +46,7 @@ self::$config['site']['desc']   = "Do your tax job in Iran";
 self::$config['visitor']              = true;
 
 self::$config['debug']              = false;
-self::$config['coming']             = false;
+self::$config['coming']             = true;
 // self::$config['redirect']           = 'a';
 
 
