@@ -5,9 +5,9 @@ class view
 {
 	public static function config()
 	{
-		\dash\data::site_title(T_("Khadije Charity"));
-		\dash\data::site_desc(T_("Executor of first pilgrimage to the Ahl al-Bayt"));
-		\dash\data::site_slogan(T_('Karbala'). ' - '. T_('Mashhad'). ' - '. T_('Qom'));
+		\dash\data::site_title(T_("Taraz Tax"));
+		\dash\data::site_desc(T_("Do your tax job in Iran"));
+		\dash\data::site_slogan(T_('be relax with us in your tax problems!'));
 
 		\dash\data::page_desc(\dash\data::site_desc(). ' | '. \dash\data::site_slogan());
 
