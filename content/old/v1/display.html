@@ -1,0 +1,226 @@
+{%extends display.main%}
+
+
+{%block beforeHeader%}
+ {{block('landPage')}}
+{%endblock%}
+
+{%block content%}
+
+ {{block('about')}}
+ {{block('thinking')}}
+
+
+ {{block('donate2')}}
+
+
+
+
+ {{block('statistic')}}
+ {{block('lastNews')}}
+
+ {{block('quote')}}
+ {{block('address2')}}
+ {{block('certificates')}}
+
+ {{block('imani')}}
+
+{%endblock%}
+
+
+
+{%block landPage%}
+<div id='landing'></div>
+{%endblock%}
+
+
+{%block about%}
+ <div class="tile fs14" id='aboutBox'>
+  <div class="cn">
+    <div class="f">
+      <div class="c5 s12 text">
+        <h2><a href="{{url.base}}/about">{%trans "About"%} {{site.title}} {%if lang.current == 'fa'%}<small>سلام الله علیها</small>{%endif%}</a></h2>
+        <p>موسسه حضرت خدیجه علیها السلام به همت جناب آقای زهیر ثباتی مقدم در سال 1394و با حضور حضرت حجت الاسلام و المسلمین فرحزاد ایجاد و بعداً با عنوان توسعه فرهنگ زیارت اهل بیت علیهم السلام و ترویج نام و مرام مادران و همسران اهل بیت علیهم السلام بویژه حضرت خدیجه علیها السلام   و احیای سنن فراموش شده (برگزاری مناسبتها و سنن فراموش شده یا کمتر مورد توجه قرار گرفته مثل قرباینی،اطعام غدیر،وفات حضرت خدیجه  و...) فعالیت آن ادامه پیدا کرد.</p>
+        <p>مأموریت مشخص موسسه همانگونه که از نامش برداشت میشود، ساماندهی امور زائرین با کمک و مشارکت مردم و ایجاد روحیه انجام امور خیریه حتی با ارقام محدود می باشد.</p>
+      </div>
+      <div class="c s12">
+        <div class="videoBox">
+          <div id="15143527106877784"><script async src="https://www.aparat.com/embed/o4Kc8?data[rnddiv]=15143527106877784"></script></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+{%endblock%}
+
+
+{%block imani%}
+ <div class="tile fs14" id='imaniBox'>
+  <div class="cn">
+    <div class="f">
+      <div class="c9 s12 text pRa10">
+        <h2><a href="{{url.base}}/mahdi-imani">اولین خیر شهید خیریه حضرت خدیجه</a></h2>
+        <p>خدا را هزاران بار شاکرم که به این بنده حقیر نعمت بندگی خود را عطا کرد و زبان، قاصر از وصف و قدردانی نعمات ایشان است که یکی از بزرگترین نعمت ها حب علی علیه السلام و اولاد مطهرش است و این راه هم مدیون پاکدامنی مادر و پدر است که با رزق حلال مرا پروراندند. من چطور قدردان خداوند باشم که رهبری فرزانه، دلسوز و عارف و مظلوم چون آقا سید علی خامنه ای (حفظه الله) را مقتدای ما فرمود که متاسفانه آنطور که باید و شاید نتوانستم سربازی ایشان را درک کنم.</p>
+
+        <p>پروردگارا به حق محمد و آل محمد از گناهان و سستی های من بگذر که همه از نادانی و کاهلی بوده و سرم از شرمساری پایین است. خدای من! به ارحم الراحمین بودن شما اعتقاد داشتم و یقین قلبی داشتم که مورد رافت شما قرار می گیرم. انشاالله.</p>
+        <h3>فرازی از وصیت نامه شهید مدافع حرم، مهدی ایمانی</h3>
+      </div>
+      <div class="c3 s12">
+        <img src="{{url.site}}/static/images/homepage/mahdi-imani.jpg" alt='{%trans "Shahid Mahdi Imani"%}'>
+      </div>
+    </div>
+  </div>
+ </div>
+{%endblock%}
+
+
+{%block thinking%}
+<section id='thinkingTile'>
+  <div class="cn">
+    <h3>{%trans "Do you know?"%}</h3>
+    <p>هزاران نفر در سراسر کشور عزیزمان تاکنون به زیارت امام رضا ع و حضرت معصومه س مشرف نشده‌اند و آرزوی زیارت این بزرگان را دارند؟</p>
+    <p>طبق بررسی‌های صورت گرفته فقط در استان قم بیش از ۵هزار نفر ساکن این استان تاکنون حتی یکبار هم به حرم حضرت معصومه سلام الله علیها مشرف نشده‌اند!</p>
+    <p>
+      <a href="{{url.base}}a/trip" class="btn light outline mB20" data-direct>{%trans "Family trip signup"%}</a>
+      <a href="{{url.base}}a/group" class="btn light outline mB20" data-direct>{%trans "Group trip signup"%}</a>
+      <a href="{{url.base}}/donate" class="btn light outline mB20">{%trans "Donate"%}</a>
+
+    </p>
+  </div>
+</section>
+{%endblock%}
+
+
+{%block statistic%}
+<section id='statisticTile'>
+  <div class="cn">
+  <h2 class="txtC mB25">آمار زائر اولیها در {{site.title}}</h2>
+   <div class="f">
+    <div class="c">
+     <div class="statistic">
+       <div class="label hide"><span class="sf-card"></span></div>
+       <div class="value">{{16000 | number_format | fitNumber}}</div>
+       <div class="label">{%trans "Qom"%}</div>
+     </div>
+    </div>
+
+    <div class="cauto">
+     <div class="statistic">
+       <div class="label hide"><span class="sf-users"></span></div>
+       <div class="value">{{2000 | number_format | fitNumber}}</div>
+       <div class="label">{%trans "Mashhad"%}</div>
+     </div>
+    </div>
+
+    <div class="c">
+     <div class="statistic">
+       <div class="label hide"><span class="sf-exchange"></span></div>
+       <div class="value">{{110 | number_format | fitNumber}}</div>
+       <div class="label">{%trans "Karbala"%}</div>
+     </div>
+    </div>
+
+   </div>
+  </div>
+</section>
+{%endblock%}
+
+
+{%block certificates%}
+<section id='certificateTile'>
+  <div class="cn">
+    <div class="f">
+      <div class="c s12"><h3>{%trans "license and supporters"%}</h3></div>
+      <div class="cauto s12">
+       <nav>
+         <a href="{{url.base}}/certificate"><img src="{{url.site}}/static/images/cert/farhang.png" alt='{%trans "Certificate"%}'></a>
+         <a href="{{url.base}}/certificate"><img src="{{url.site}}/static/images/cert/masajed.png" alt='{%trans "Certificate"%}'></a>
+         <a href="{{url.base}}/certificate" class="hide"><img src="{{url.site}}/static/images/cert/enamad1.png" alt='{%trans "Certificate"%}'></a>
+         <a href="https://arvancloud.com" title='{%trans "Secured by Arvancloud"%}' target="_blank"><img src="{{url.site}}/static/images/cert/arvancloud.png" alt='{%trans "Arvancloud"%}'></a>
+       </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}
+
+
+{%block address%}
+<a id='addressTile' href="{{url.base}}/contact"></a>
+{%endblock%}
+
+
+{%block donate%}
+<section class="tile">
+ <h2>Donate</h2>
+</section>
+{%endblock%}
+
+
+{%block quote%}
+<div class='quoteTile'>
+  <div class="cn">
+   <article class="quote-person">
+    <p>همانا قم کوفه کوچک است. آگاه باشید که بهشت هشت در دارد که سه در از آنها برای قم است. بانویی از اولاد من در آنجا از دنیا میرود که نامش فاطمه دختر موسی است و با شفاعت این بانو تمام شیعیان وارد بهشت خواهند شد.</p>
+    <div class="author f">
+     <h4 class="c">امام صادق علیهم السلام</h4>
+     <abbr class="cauto os">بحارالانوار، ج٥٧، ص٢٢٨</abbr>
+    </div>
+   </article>
+ </div>
+</div>
+{%endblock%}
+
+
+{%block lastNews%}
+<section id='lastNewsBox' class="news">
+  <h2 class="hide">{%trans "Last news"%} {{site.title}}</h2>
+  <div class="cn">
+    <div class="f">
+
+      <div class="c6 s12 pRa25">
+        <article class="wide">
+          <a href="#"><img src="{{url.site}}/static//images/homepage/hostel.jpg" alt="اسکان رایگان ۱۱۰۰۰ زائر اولی در قم"></a>
+          <h2><a href="#">اسکان رایگان ۱۱۰۰۰ زائر اولی در قم</a></h2>
+          <p>از ابتدای فعالیت این مؤسسه تا کنون 11 هزار زائرکه عنوان زیارت اولی دارند، از سراسر کشور توانسته اند به حرم حضرت معصومه سلام الله علیها مشرف شوند و در این زائر سرا اسکان پیدا کنند.</p>
+        </article>
+      </div>
+
+      <div class="c6 s12">
+        <article class="f mB25">
+          <div class="c">
+            <h3><a href="{{url.base}}/news/sample">اجرای طرح زیارت اولی‌های حرم حضرت معصومه (س)</a></h3>
+            <p class="s0 m0">حجت‎الاسلام ثباتی با اشاره به نحوۀ شرکت در طرح زیارت اولیهای حرم حضرت معصومه (س) گفت: علاقه‎مندان زیارت حضرت با تشکیل کاروانی ۴۰ نفره به مدت دو روز و دو شب میهمان سفرۀ کریمۀ اهل‎‎بیت (ع) خواهند بود.</p>
+          </div>
+          <div class="c4 txtRa">
+            <a href="{{url.base}}/news/sample"><img src="{{url.site}}/static//images/homepage/news-sabati.jpg" alt="اجرای طرح زیارت اولی‌های حرم حضرت معصومه (س)"></a>
+          </div>
+        </article>
+
+        <article class="f mB25">
+          <div class="c">
+            <h3><a href="#">پذیرش ۴۰۰ بانوی زیارت اولی در آستان بانوی کرامت</a></h3>
+            <p class="s0 m0">۴۰۰ بانوی زیارت اولی در هفته جاری و ایام منتسب به حضرت فاطمه معصومه سلام الله علیها به زیارت آستان مقدس بانوی کرامت مشرف شدند.</p>
+          </div>
+          <div class="c4 txtRa">
+            <a href="#"><img src="{{url.site}}/static//images/homepage/news-haram.jpg" alt="پذیرش ۴۰۰ بانوی زیارت اولی در آستان بانوی کرامت"></a>
+          </div>
+        </article>
+
+        <article class="f mB25">
+          <div class="c">
+            <h3><a href="#">امكان زیارت رایگان حضرت معصومه(س) برای زائراولی ها</a></h3>
+            <p class="s0 m0">كسانی كه تا به حال به زیارت حضرت فاطمه معصومه(س) مشرف نشده اند، نام و نام خانوادگی خود را به شماره ۰۹۹۰۳۵۱۱۲۹۱ پیامك كنند تا شرایط سفر به زیارت آن حضرت (س) برایشان فراهم شود.</p>
+          </div>
+          <div class="c4 txtRa">
+            <a href="#"><img src="{{url.site}}/static//images/homepage/news-haram-view.jpg" alt="امكان زیارت رایگان حضرت معصومه(س) برای زائراولی ها"></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}
+
+

@@ -5,13 +5,20 @@ class view
 {
 	public static function config()
 	{
-		// define default value for global
-		\dash\data::site_title(T_("Dash"));
-		\dash\data::site_desc(T_("Free PHP Framework & CMS!"));
-		\dash\data::site_slogan(T_("The simple framework for php programmers ;)"));
+		\dash\data::site_title(T_("Khadije Charity"));
+		\dash\data::site_desc(T_("Executor of first pilgrimage to the Ahl al-Bayt"));
+		\dash\data::site_slogan(T_('Karbala'). ' - '. T_('Mashhad'). ' - '. T_('Qom'));
+
 		\dash\data::page_desc(\dash\data::site_desc(). ' | '. \dash\data::site_slogan());
-		\dash\data::include_css(false);
-		\dash\data::bodyclass(null);
+
+		\dash\data::page_copyright(
+			T_('© :year :site. All right reserved.',
+			[
+				'year' => \dash\date::tdate(false, "year", true),
+				'site' => "<a href='". \dash\url::base(). "' title='". \dash\data::site_desc() ."'>". \dash\data::site_title(). "</a>"
+			]
+		));
+
 	}
 }
 ?>

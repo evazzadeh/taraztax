@@ -1,0 +1,28 @@
+ <div class="wrapper" data-xhr='wrapper'>
+{%block content%}
+  <div class="page-title">
+   <div class="cn">
+{%if page.title%}
+    <h1><a href="{{url.pwd}}">{{page.title}}</a></h1>
+{%endif%}
+{%if page.desc%}
+    <h2>{{page.desc}}</h2>
+{%endif%}
+   </div>
+  </div>
+
+{%block pageData%}
+  <div class="pc">
+   <div class="cn">
+{%block page%}{%endblock%}
+   </div>
+  </div>
+{%block pageExtra%}{%endblock%}
+{%endblock%}
+{%endblock%}
+ </div>
+
+
+<div class="bheader" data-xhr='bheader'>
+{%block beforeHeader%}{%endblock%}
+</div>

@@ -1,0 +1,354 @@
+{%extends display.main%}
+
+
+{%block head_css%}
+ <link rel="stylesheet"       href="{{url.site}}/static/{{'css/style-old-v2.css' | filemtime(true)}}">
+{%endblock%}
+
+{%block beforeHeader1%}
+ {{block('landPage')}}
+{%endblock%}
+
+{%block content%}
+
+ {{block('harameyn2')}}
+
+ {{block('about')}}
+ {{block('quickpay')}}
+ {{block('servicing')}}
+
+
+ {{block('donate2')}}
+
+
+
+
+ {{block('statistic')}}
+ {{block('lastNews')}}
+
+ {{block('quote')}}
+ {{block('address2')}}
+ {{block('certificates')}}
+
+ {{block('imani')}}
+
+{%endblock%}
+
+
+{%block landPage2%}
+<div id='landing2'></div>
+{%endblock%}
+
+
+{%block landPage%}
+<div id='landing'></div>
+{%endblock%}
+
+
+{%block harameyn2%}
+<div id='harameyn2'>
+  <img src="{{url.site}}/static/images/homepage-v2/harameyn.jpg" alt="{{site.title}}">
+</div>
+{%endblock%}
+
+
+{%block about%}
+ <div class="tile fs14" id='aboutBox'>
+  <div class="cn">
+    <div class="f">
+      <div class="c7 m12 s12 text">
+        <h2><a href="{{url.base}}/about">{%trans "About"%} {{site.title}} {%if lang.current == 'fa'%}<small>سلام الله علیها</small>{%endif%}</a></h2>
+        <p>موسسه‌ی فرهنگی هنری حضرت خدیجه در سال ۱۳۹۴ با هدف توسعه‌ی فرهنگ زیارت اهل بیت علیهم السلام تاسیس گردید. و با دو اولویت زیارت اهل بیت و احیای سنن فراموش شده از قبیل قربانی، اطعام غدیر و... فعالیت خود را ادامه داده است. هم‌چنین این موسسه در راستای اهداف خود، به فعالیت‌های خداپسندانه از جمله تامین جهیزیه، اعطای خدمات درمان نیازمندان و سایر امور خیریه، پرداخته است.</p>
+
+        <div class="f">
+          <a href="{{url.base}}/donate" class="btn block primary success mB10">{%trans "Donate"%}</a>
+        </div>
+
+        <div class="f">
+          <div class="c12">
+            <a href="{{url.base}}/a/trip" class="btn xl block primary outline mB10 sahargahan" data-direct ><img src="{{url.site}}/static/images/homepage-v2/sahargahan.png" alt="سحرگهان حرم">برنامه سحرگهان حرم حضرت معصومه سلام الله علیها </a>
+          </div>
+          <div class="c12">
+            <a href="{{url.base}}/a/group" class="btn block primary outline mB10" data-direct>{%trans "Group trip signup"%}</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="c m12 s12">
+        <div class="homepageBook">
+          <a href="{{url.base}}/mylovestory" title='{%trans "Click to go to download page"%}'>
+            <h2>{%trans "Download love story book"%}</h2>
+            <img src="{{url.site}}/static/images/book/majaraye-eshge-man.jpg" alt='{{page.title}}'>
+          </a>
+        </div>
+
+{%if false%}
+        <div class="videoBox">
+          <div id="15210142126358705"><script async type="text/JavaScript" src="https://www.aparat.com/embed/CFuQR?data[rnddiv]=15210142126358705&data[responsive]=yes"></script></div>
+        </div>
+{%endif%}
+
+      </div>
+    </div>
+  </div>
+ </div>
+{%endblock%}
+
+
+{%block imani%}
+ <div class="tile fs14" id='imaniBox'>
+  <div class="cn">
+    <div class="f">
+      <div class="c9 s12 text pRa10">
+        <h2><a href="{{url.base}}/mahdi-imani">اولین خیر شهید خیریه حضرت خدیجه</a></h2>
+        <p>خدا را هزاران بار شاکرم که به این بنده حقیر نعمت بندگی خود را عطا کرد و زبان، قاصر از وصف و قدردانی نعمات ایشان است که یکی از بزرگترین نعمت ها حب علی علیه السلام و اولاد مطهرش است و این راه هم مدیون پاکدامنی مادر و پدر است که با رزق حلال مرا پروراندند. من چطور قدردان خداوند باشم که رهبری فرزانه، دلسوز و عارف و مظلوم چون آقا سید علی خامنه ای (حفظه الله) را مقتدای ما فرمود که متاسفانه آنطور که باید و شاید نتوانستم سربازی ایشان را درک کنم.</p>
+
+        <p>پروردگارا به حق محمد و آل محمد از گناهان و سستی های من بگذر که همه از نادانی و کاهلی بوده و سرم از شرمساری پایین است. خدای من! به ارحم الراحمین بودن شما اعتقاد داشتم و یقین قلبی داشتم که مورد رافت شما قرار می گیرم. انشاالله.</p>
+        <h3>فرازی از وصیت نامه شهید مدافع حرم، مهدی ایمانی</h3>
+      </div>
+      <div class="c3 s12">
+        <img src="{{url.site}}/static/images/homepage-v2/mahdi-imani.jpg" alt='{%trans "Shahid Mahdi Imani"%}'>
+      </div>
+    </div>
+  </div>
+ </div>
+{%endblock%}
+
+
+{%block quickpay%}
+<section id='quickpay' class="tile fs14">
+  <div class="cn">
+    <h2>به جمع خیرین بپیوندید و در ثواب زیارت سهیم باشید</h2>
+    <p>
+      اعتبار اجرای این طرح از محل کمک های نقدی و غیر نقدی مردم نیکوکار و دوستداران اهل بیت تامین می‌شود. از این رو خیّرین و افرادی که تمایل دارند در طرح <span class="bold">زیارت اولی های اهل بیت علیهم السلام</span> سهیم شوند می‌توانند کمک های نقدی خود را علاوه بر <span class="compact bold ltr">{{"*733*55#" | fitNumber}}</span> از طریق روش‌های زیر پرداخت نمایند.</p>
+
+
+      <div class="cn mT25">
+        <div class="f">
+          <div class="c6 s12 pA5">
+            <div class="f msg">
+              <div class="s12 cauto"><span class="spay-64-tejarat mT10"></span></div>
+              <div class="c txtC">
+                <p>
+                شماره کارت <span class="ltr compact">{{"5859-8370-0006-4010" | fitNumber}}</span><br>
+                شماره حساب <span class="ltr compact">{{"2310353054" | fitNumber}}</span><br>
+                شبا <span class="ltr compact">{{"IR 8201 8000 0000 0023 1035 3054" | fitNumber}}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="c6 s12 pA5">
+            <div class="f msg">
+              <div class="s12 cauto"><span class="spay-64-melli mT10"></span></div>
+              <div class="c txtC">
+                <p>
+                شماره کارت <span class="ltr compact">{{"6037-9918-9994-4486" | fitNumber}}</span><br>
+                شماره حساب <span class="ltr compact">{{"0116221622004" | fitNumber}}</span><br>
+                شبا <span class="ltr compact">{{"IR 19 0170 0000 0011 6221 6220 04" | fitNumber}}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="f msg mLR5">
+          <form class="input pTB10" method="post">
+            <label class="addon s0" for="quickpayinput">مبلغ به تومان</label>
+            <input type="number" name="quickpay" placeholder="پرداخت سریع سهم من" id="quickpayinput" step="1000" min='1000'>
+            <button class="addon btn primary">پرداخت سریع بصورت گمنام</button>
+          </form>
+
+        </div>
+      </div>
+
+      <p>هم‌چنین علاقه‌مندان به اعطای کمک‌های غیرنقدی مثل محل اسکان، پذیرایی و حمل و نقل زائرین و ... می‌توانند پس از ثبت‌نام در سایت با مراجعه به بخش درخواست خادمی، اطلاعات لازم در خصوص نحوه همکاری را تکمیل و ثبت نمایند. پس از ثبت درخواست خادمی، در اسرع وقت با داوطلبین تماس گرفته شده و هماهنگی‌های لازم انجام خواهد شد.</p>
+  </div>
+</section>
+{%endblock%}
+
+
+
+{%block servicing%}
+<section id='serviceTile'>
+  <div class="cn">
+    <h3>شما هم می‌توانید</h3>
+    <p>خدمت به زائران اهل بیت علیهم السلام از آرزوهای  بسیاری از مومنین و مومنان است</p>
+    <p>موسسه حضرت خدیجه س آماده همکاری با خادمین محترم میباشد</p>
+    <p></p>
+    <p><a href="{{url.base}}/khadem" class="btn secondary hauto"><img src="{{url.site}}/static/images/homepage-v2/nosrati-lakom-moado.png"></a></p>
+  </div>
+</section>
+{%endblock%}
+
+
+{%block thinkingOld%}
+<section id='thinkingTile'>
+  <div class="cn">
+    <h3>{%trans "Do you know?"%}</h3>
+
+
+    <p>شما در طول سال چند بار به سفرهای زیارتی مشرف می‌شوید؟</p>
+    <p>آیا می‌دانید در سراسر کشور عزیزمان افراد آرزومند بسیاری هستند که به‌دلیل عدم تمکن مالی در حسرت زیارت اهل بیت مانده‌اند؟!</p>
+    <p>آیا می‌دانید با اهدای حداقل ده هزار تومان در طول سال، می‌توان آرزوی نیازمندانی که حسرت زیارت به‌دلشان مانده را برآورده کرد؟!</p>
+    <p>طبق بررسی‌های صورت گرفته، فقط در استان قم بیش از ۵ هزار نفر ساکن این استان هستند که تاکنون حتی یکبار به حرم حضرت معصومه سلام الله علیها مشرف نشده‌اند!</p>
+    <p><a href="{{url.base}}/donate" class="btn light outline mB20">{%trans "Donate"%}</a></p>
+  </div>
+</section>
+{%endblock%}
+
+
+{%block statistic%}
+<section id='statisticTile'>
+  <div class="cn">
+  <h2 class="txtC mB25">آمار زائر اولیها در {{site.title}}</h2>
+   <div class="f">
+    <div class="c">
+     <div class="statistic">
+       <div class="label hide"><span class="sf-card"></span></div>
+       <div class="value">{{staticvar.qom | number_format | fitNumber}}</div>
+       <div class="label">{%trans "Qom"%}</div>
+     </div>
+    </div>
+
+    <div class="cauto">
+     <div class="statistic">
+       <div class="label hide"><span class="sf-users"></span></div>
+       <div class="value">{{staticvar.mashhad | number_format | fitNumber}}</div>
+       <div class="label">{%trans "Mashhad"%}</div>
+     </div>
+    </div>
+
+    <div class="c">
+     <div class="statistic">
+       <div class="label hide"><span class="sf-exchange"></span></div>
+       <div class="value">{{staticvar.karbala | number_format | fitNumber}}</div>
+       <div class="label">{%trans "Karbala"%}</div>
+     </div>
+    </div>
+
+   </div>
+  </div>
+</section>
+{%endblock%}
+
+
+{%block certificates%}
+<section id='certificateTile'>
+  <div class="cn">
+    <div class="f">
+      <div class="c s12"><h3>{%trans "license and supporters"%}</h3></div>
+      <div class="cauto s12">
+       <nav>
+         <a href="{{url.base}}/certificate"><img src="{{url.site}}/static/images/cert/farhang.png" alt='{%trans "Certificate"%}'></a>
+         <a href="{{url.base}}/certificate"><img src="{{url.site}}/static/images/cert/masajed.png" alt='{%trans "Certificate"%}'></a>
+         <a href="{{url.base}}/certificate" class="hide"><img src="{{url.site}}/static/images/cert/enamad1.png" alt='{%trans "Certificate"%}'></a>
+         <a href="https://arvancloud.com" title='{%trans "Secured by Arvancloud"%}' target="_blank"><img src="{{url.site}}/static/images/cert/arvancloud.png" alt='{%trans "Arvancloud"%}'></a>
+       </nav>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}
+
+
+{%block address%}
+<a id='addressTile' href="{{url.base}}/contact"></a>
+{%endblock%}
+
+
+{%block donate%}
+<section class="tile">
+ <h2>Donate</h2>
+</section>
+{%endblock%}
+
+
+{%block quote%}
+<div class='quoteTile'>
+  <div class="cn">
+   <article class="quote-person">
+    <p>بعد از سال‌ها حسرت و انتظار؛ رسیدیم کربلا...<br/> حال‌وهوای آنجا دلم را برد پای روضه‌ها، وقتی هم‌نوا با عزادارانِ حسرت به دل زیارت کربلا زمزمه می‌کردم: « بر مشامم می‌رسد هر لحظه بوی کربلا، بر دلم ترسم بماند آرزوی کربلا».</p>
+    <p>اشک چشمانم امانم نمی‌داد، یعنی من هم زائرتان شدم؟!<br>بوی سیب به مشامم می‌رسد؛ خدای من "اینجا کربلاست"<br>اللهم لک الحمد حمد الشاکرین...</p>
+    <div class="author f">
+     <h4 class="c">یک زائر اولی</h4>
+     <abbr class="cauto os">زیارت اول از کربلا</abbr>
+    </div>
+   </article>
+ </div>
+</div>
+{%endblock%}
+
+
+{%block lastNews%}
+<section id='lastNewsBox' class="news">
+{%set lastPostsRecord = posts({"limit" : 4})%}
+{%set defaultImage  = url.site ~ "/static/images/homepage-v2/news-haram.jpg" %}
+
+
+  <div class="cn">
+    <h2><a href="{{url.base}}/blog">{%trans "Last news"%} {{site.title}} <span class="badge primary floatRa s0">بیشتر بخوانید</span></a></h2>
+    <div class="f">
+
+      <div class="c6 s12 pRa25">
+{%if lastPostsRecord.0.title%}
+        <article class="wide">
+          <a href="{{url.base}}/{{lastPostsRecord.0.url}}">
+            <img src="{%if lastPostsRecord.0.meta.thumb%}{{lastPostsRecord.0.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.0.title}}">
+          </a>
+          <h2><a href="{{url.base}}/{{lastPostsRecord.0.url}}">{{lastPostsRecord.0.title}}</a></h2>
+          <p>{{lastPostsRecord.0.excerpt}}</p>
+        </article>
+{%endif%}
+      </div>
+
+      <div class="c6 s12">
+{%if lastPostsRecord.1.title%}
+        <article class="f mB25">
+          <div class="c">
+            <h3><a href="{{url.base}}/{{lastPostsRecord.1.url}}">{{lastPostsRecord.1.title}}</a></h3>
+            <p class="s0 m0">{{lastPostsRecord.1.excerpt}}</p>
+          </div>
+          <div class="c4 txtRa">
+            <a href="{{url.base}}/{{lastPostsRecord.1.url}}">
+              <img src="{%if lastPostsRecord.1.meta.thumb%}{{lastPostsRecord.1.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.1.title}}">
+            </a>
+          </div>
+        </article>
+{%endif%}
+
+{%if lastPostsRecord.2.title%}
+        <article class="f mB25">
+          <div class="c">
+            <h3><a href="{{url.base}}/{{lastPostsRecord.2.url}}">{{lastPostsRecord.2.title}}</a></h3>
+            <p class="s0 m0">{{lastPostsRecord.2.excerpt}}</p>
+          </div>
+          <div class="c4 txtRa">
+            <a href="{{url.base}}/{{lastPostsRecord.2.url}}">
+              <img src="{%if lastPostsRecord.2.meta.thumb%}{{lastPostsRecord.2.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.2.title}}">
+            </a>
+          </div>
+        </article>
+{%endif%}
+
+{%if lastPostsRecord.3.title%}
+        <article class="f mB25">
+          <div class="c">
+            <h3><a href="{{url.base}}/{{lastPostsRecord.3.url}}">{{lastPostsRecord.3.title}}</a></h3>
+            <p class="s0 m0">{{lastPostsRecord.3.excerpt}}</p>
+          </div>
+          <div class="c4 txtRa">
+            <a href="{{url.base}}/{{lastPostsRecord.3.url}}">
+              <img src="{%if lastPostsRecord.3.meta.thumb%}{{lastPostsRecord.3.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.3.title}}">
+            </a>
+          </div>
+        </article>
+{%endif%}
+
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}
+
+
