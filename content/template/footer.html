@@ -2,20 +2,20 @@
   <div class="cn">
     <div class="f middle">
       <div class="c4 s12 pRa25">
-        <h3><a href="{{url.base}}">{{site.title}}</a></h3>
-        <p>{{site.desc}}</p>
-{%if not login.id%}
-      <div class="cauto s12 os txtRa">
-        <a href="{{url.base}}/enter" data-direct class="btn outline primary pRa10">{%trans "Enter"%}</a>
-      </div>
+        <h3><a href="{{url.kingdom}}">{{site.title}}</a></h3>
+        <p>{{site.desc}}
+          <br>
+{%if login.id%}
+         <a href="{{url.kingdom}}/cp" data-direct class="btn outline primary">{%trans "Enter"%}</a>
 {%endif%}
+        </p>
       </div>
 
       <div class="c4 s12 pRa25">
-         <h4><a href="{{url.base}}">{{site.slogan}}</a></h4>
+         <h4><a href="{{url.kingdom}}">{{site.slogan}}</a></h4>
          <nav>
-          <a href="{{url.base}}/about">{%trans "About"%}</a>
-          <a href="{{url.base}}/contact">{%trans "Contact"%}</a>
+          <a href="{{url.kingdom}}/about">{%trans "About"%}</a>
+          <a href="{{url.kingdom}}/contact">{%trans "Contact"%}</a>
          </nav>
       </div>
 
@@ -31,7 +31,7 @@
     </div>
 
     <div class="bottom f">
-     <div class="c s12">تمام حقوق این وب‌سایت متعلق به <a href="{{url.base}}">{{site.title}}</a> می‌باشد.</div>
+     <div class="c s12">تمام حقوق این وب‌سایت متعلق به <a href="{{url.kingdom}}">{{site.title}}</a> می‌باشد.</div>
      <div class="cauto os s12" id='ermile'><a href="https://ermile.com" target='_blank'>{%trans "Developed by Ermile"%}</a></div>
     </div>
   </div>
