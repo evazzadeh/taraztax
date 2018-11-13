@@ -15,9 +15,9 @@ self::$language =
 /**
  * system default lanuage
  */
-self::$config['site']['title']         = "Dash";
-self::$config['site']['desc']          = "Free PHP Framework & CMS!";
-self::$config['site']['slogan']        = "The simple framework for php programmers ;)";
+self::$config['site']['title']         = "Taraz Tax";
+self::$config['site']['desc']          = "Do your tax job in Iran";
+self::$config['site']['slogan']        = "be relax with us in your tax problems!";
 
 self::$config['debug']                 = true;
 self::$config['enter']['force_verify'] = false;
