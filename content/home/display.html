@@ -1,17 +1,14 @@
 {%extends display.main%}
 
 
-{%block beforeHeader1%}
+{%block beforeHeader%}
  {{block('landPage')}}
 {%endblock%}
 
 {%block content%}
 
- {{block('harameyn2')}}
-
  {{block('about')}}
- {{block('quickpay')}}
- {{block('servicing')}}
+ {{block('thinking')}}
 
 
  {{block('donate2')}}
@@ -31,20 +28,9 @@
 {%endblock%}
 
 
-{%block landPage2%}
-<div id='landing2'></div>
-{%endblock%}
-
 
 {%block landPage%}
 <div id='landing'></div>
-{%endblock%}
-
-
-{%block harameyn2%}
-<div id='harameyn2'>
-  <img src="{{url.site}}/static/images/homepage-v2/bgO.jpg" alt="{{site.title}}">
-</div>
 {%endblock%}
 
 
@@ -52,38 +38,15 @@
  <div class="tile fs14" id='aboutBox'>
   <div class="cn">
     <div class="f">
-      <div class="c7 m12 s12 text">
+      <div class="c5 s12 text">
         <h2><a href="{{url.base}}/about">{%trans "About"%} {{site.title}} {%if lang.current == 'fa'%}<small>سلام الله علیها</small>{%endif%}</a></h2>
-        <p>موسسه‌ی فرهنگی هنری حضرت خدیجه در سال ۱۳۹۴ با هدف توسعه‌ی فرهنگ زیارت اهل بیت علیهم السلام تاسیس گردید. و با دو اولویت زیارت اهل بیت و احیای سنن فراموش شده از قبیل قربانی، اطعام غدیر و... فعالیت خود را ادامه داده است. هم‌چنین این موسسه در راستای اهداف خود، به فعالیت‌های خداپسندانه از جمله تامین جهیزیه، اعطای خدمات درمان نیازمندان و سایر امور خیریه، پرداخته است.</p>
-
-        <div class="f">
-          <a href="{{url.base}}/donate" class="btn block primary success mB10">{%trans "Donate"%}</a>
-        </div>
-
-        <div class="f">
-          <div class="c12">
-            <a href="{{url.base}}/a/trip" class="btn xl block primary outline mB10 sahargahan" data-direct ><img src="{{url.site}}/static/images/homepage-v2/sahargahan.png" alt="سحرگهان حرم">برنامه سحرگهان حرم حضرت معصومه سلام الله علیها </a>
-          </div>
-          <div class="c12">
-            <a href="{{url.base}}/a/group" class="btn block primary outline mB10" data-direct>{%trans "Group trip signup"%}</a>
-          </div>
-        </div>
-
+        <p>موسسه حضرت خدیجه علیها السلام به همت جناب آقای زهیر ثباتی مقدم در سال 1394و با حضور حضرت حجت الاسلام و المسلمین فرحزاد ایجاد و بعداً با عنوان توسعه فرهنگ زیارت اهل بیت علیهم السلام و ترویج نام و مرام مادران و همسران اهل بیت علیهم السلام بویژه حضرت خدیجه علیها السلام   و احیای سنن فراموش شده (برگزاری مناسبتها و سنن فراموش شده یا کمتر مورد توجه قرار گرفته مثل قرباینی،اطعام غدیر،وفات حضرت خدیجه  و...) فعالیت آن ادامه پیدا کرد.</p>
+        <p>مأموریت مشخص موسسه همانگونه که از نامش برداشت میشود، ساماندهی امور زائرین با کمک و مشارکت مردم و ایجاد روحیه انجام امور خیریه حتی با ارقام محدود می باشد.</p>
       </div>
-      <div class="c m12 s12">
-        <div class="homepageBook">
-          <a href="{{url.base}}/mylovestory" title='{%trans "Click to go to download page"%}'>
-            <h2>{%trans "Download love story book"%}</h2>
-            <img src="{{url.site}}/static/images/book/majaraye-eshge-man.jpg" alt='{{page.title}}'>
-          </a>
-        </div>
-
-{%if false%}
+      <div class="c s12">
         <div class="videoBox">
-          <div id="15210142126358705"><script async type="text/JavaScript" src="https://www.aparat.com/embed/CFuQR?data[rnddiv]=15210142126358705&data[responsive]=yes"></script></div>
+          <div id="15143527106877784"><script async src="https://www.aparat.com/embed/o4Kc8?data[rnddiv]=15143527106877784"></script></div>
         </div>
-{%endif%}
-
       </div>
     </div>
   </div>
@@ -103,7 +66,7 @@
         <h3>فرازی از وصیت نامه شهید مدافع حرم، مهدی ایمانی</h3>
       </div>
       <div class="c3 s12">
-        <img src="{{url.site}}/static/images/homepage-v2/mahdi-imani.jpg" alt='{%trans "Shahid Mahdi Imani"%}'>
+        <img src="{{url.site}}/static/images/homepage/mahdi-imani.jpg" alt='{%trans "Shahid Mahdi Imani"%}'>
       </div>
     </div>
   </div>
@@ -111,84 +74,18 @@
 {%endblock%}
 
 
-{%block quickpay%}
-<section id='quickpay' class="tile fs14">
-  <div class="cn">
-    <h2>به جمع خیرین بپیوندید و در ثواب زیارت سهیم باشید</h2>
-    <p>
-      اعتبار اجرای این طرح از محل کمک های نقدی و غیر نقدی مردم نیکوکار و دوستداران اهل بیت تامین می‌شود. از این رو خیّرین و افرادی که تمایل دارند در طرح <span class="bold">زیارت اولی های اهل بیت علیهم السلام</span> سهیم شوند می‌توانند کمک های نقدی خود را علاوه بر <span class="compact bold ltr">{{"*733*55#" | fitNumber}}</span> از طریق روش‌های زیر پرداخت نمایند.</p>
-
-
-      <div class="cn mT25">
-        <div class="f">
-          <div class="c6 s12 pA5">
-            <div class="f msg">
-              <div class="s12 cauto"><span class="spay-64-tejarat mT10"></span></div>
-              <div class="c txtC">
-                <p>
-                شماره کارت <span class="ltr compact">{{"5859-8370-0006-4010" | fitNumber}}</span><br>
-                شماره حساب <span class="ltr compact">{{"2310353054" | fitNumber}}</span><br>
-                شبا <span class="ltr compact">{{"IR 8201 8000 0000 0023 1035 3054" | fitNumber}}</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="c6 s12 pA5">
-            <div class="f msg">
-              <div class="s12 cauto"><span class="spay-64-melli mT10"></span></div>
-              <div class="c txtC">
-                <p>
-                شماره کارت <span class="ltr compact">{{"6037-9918-9994-4486" | fitNumber}}</span><br>
-                شماره حساب <span class="ltr compact">{{"0116221622004" | fitNumber}}</span><br>
-                شبا <span class="ltr compact">{{"IR 19 0170 0000 0011 6221 6220 04" | fitNumber}}</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="f msg mLR5">
-          <form class="input pTB10" method="post">
-            <label class="addon s0" for="quickpayinput">مبلغ به تومان</label>
-            <input type="number" name="quickpay" placeholder="پرداخت سریع سهم من" id="quickpayinput" step="1000" min='1000'>
-            <button class="addon btn primary">پرداخت سریع بصورت گمنام</button>
-          </form>
-
-        </div>
-      </div>
-
-      <p>هم‌چنین علاقه‌مندان به اعطای کمک‌های غیرنقدی مثل محل اسکان، پذیرایی و حمل و نقل زائرین و ... می‌توانند پس از ثبت‌نام در سایت با مراجعه به بخش درخواست خادمی، اطلاعات لازم در خصوص نحوه همکاری را تکمیل و ثبت نمایند. پس از ثبت درخواست خادمی، در اسرع وقت با داوطلبین تماس گرفته شده و هماهنگی‌های لازم انجام خواهد شد.</p>
-  </div>
-</section>
-{%endblock%}
-
-
-
-{%block servicing%}
-<section id='serviceTile'>
-  <div class="cn">
-    <h3>شما هم می‌توانید</h3>
-    <p>خدمت به زائران اهل بیت علیهم السلام از آرزوهای  بسیاری از مومنین و مومنان است</p>
-    <p>موسسه حضرت خدیجه س آماده همکاری با خادمین محترم میباشد</p>
-    <p></p>
-    <p><a href="{{url.base}}/khadem" class="btn secondary hauto"><img src="{{url.site}}/static/images/homepage-v2/nosrati-lakom-moado.png"></a></p>
-  </div>
-</section>
-{%endblock%}
-
-
-{%block thinkingOld%}
+{%block thinking%}
 <section id='thinkingTile'>
   <div class="cn">
     <h3>{%trans "Do you know?"%}</h3>
+    <p>هزاران نفر در سراسر کشور عزیزمان تاکنون به زیارت امام رضا ع و حضرت معصومه س مشرف نشده‌اند و آرزوی زیارت این بزرگان را دارند؟</p>
+    <p>طبق بررسی‌های صورت گرفته فقط در استان قم بیش از ۵هزار نفر ساکن این استان تاکنون حتی یکبار هم به حرم حضرت معصومه سلام الله علیها مشرف نشده‌اند!</p>
+    <p>
+      <a href="{{url.base}}a/trip" class="btn light outline mB20" data-direct>{%trans "Family trip signup"%}</a>
+      <a href="{{url.base}}a/group" class="btn light outline mB20" data-direct>{%trans "Group trip signup"%}</a>
+      <a href="{{url.base}}/donate" class="btn light outline mB20">{%trans "Donate"%}</a>
 
-
-    <p>شما در طول سال چند بار به سفرهای زیارتی مشرف می‌شوید؟</p>
-    <p>آیا می‌دانید در سراسر کشور عزیزمان افراد آرزومند بسیاری هستند که به‌دلیل عدم تمکن مالی در حسرت زیارت اهل بیت مانده‌اند؟!</p>
-    <p>آیا می‌دانید با اهدای حداقل ده هزار تومان در طول سال، می‌توان آرزوی نیازمندانی که حسرت زیارت به‌دلشان مانده را برآورده کرد؟!</p>
-    <p>طبق بررسی‌های صورت گرفته، فقط در استان قم بیش از ۵ هزار نفر ساکن این استان هستند که تاکنون حتی یکبار به حرم حضرت معصومه سلام الله علیها مشرف نشده‌اند!</p>
-    <p><a href="{{url.base}}/donate" class="btn light outline mB20">{%trans "Donate"%}</a></p>
+    </p>
   </div>
 </section>
 {%endblock%}
@@ -202,7 +99,7 @@
     <div class="c">
      <div class="statistic">
        <div class="label hide"><span class="sf-card"></span></div>
-       <div class="value">{{staticvar.qom | number_format | fitNumber}}</div>
+       <div class="value">{{16000 | number_format | fitNumber}}</div>
        <div class="label">{%trans "Qom"%}</div>
      </div>
     </div>
@@ -210,7 +107,7 @@
     <div class="cauto">
      <div class="statistic">
        <div class="label hide"><span class="sf-users"></span></div>
-       <div class="value">{{staticvar.mashhad | number_format | fitNumber}}</div>
+       <div class="value">{{2000 | number_format | fitNumber}}</div>
        <div class="label">{%trans "Mashhad"%}</div>
      </div>
     </div>
@@ -218,7 +115,7 @@
     <div class="c">
      <div class="statistic">
        <div class="label hide"><span class="sf-exchange"></span></div>
-       <div class="value">{{staticvar.karbala | number_format | fitNumber}}</div>
+       <div class="value">{{110 | number_format | fitNumber}}</div>
        <div class="label">{%trans "Karbala"%}</div>
      </div>
     </div>
@@ -264,11 +161,10 @@
 <div class='quoteTile'>
   <div class="cn">
    <article class="quote-person">
-    <p>بعد از سال‌ها حسرت و انتظار؛ رسیدیم کربلا...<br/> حال‌وهوای آنجا دلم را برد پای روضه‌ها، وقتی هم‌نوا با عزادارانِ حسرت به دل زیارت کربلا زمزمه می‌کردم: « بر مشامم می‌رسد هر لحظه بوی کربلا، بر دلم ترسم بماند آرزوی کربلا».</p>
-    <p>اشک چشمانم امانم نمی‌داد، یعنی من هم زائرتان شدم؟!<br>بوی سیب به مشامم می‌رسد؛ خدای من "اینجا کربلاست"<br>اللهم لک الحمد حمد الشاکرین...</p>
+    <p>همانا قم کوفه کوچک است. آگاه باشید که بهشت هشت در دارد که سه در از آنها برای قم است. بانویی از اولاد من در آنجا از دنیا میرود که نامش فاطمه دختر موسی است و با شفاعت این بانو تمام شیعیان وارد بهشت خواهند شد.</p>
     <div class="author f">
-     <h4 class="c">یک زائر اولی</h4>
-     <abbr class="cauto os">زیارت اول از کربلا</abbr>
+     <h4 class="c">امام صادق علیهم السلام</h4>
+     <abbr class="cauto os">بحارالانوار، ج٥٧، ص٢٢٨</abbr>
     </div>
    </article>
  </div>
@@ -278,68 +174,48 @@
 
 {%block lastNews%}
 <section id='lastNewsBox' class="news">
-{%set lastPostsRecord = posts({"limit" : 4})%}
-{%set defaultImage  = url.site ~ "/static/images/homepage-v2/news-haram.jpg" %}
-
-
+  <h2 class="hide">{%trans "Last news"%} {{site.title}}</h2>
   <div class="cn">
-    <h2><a href="{{url.base}}/blog">{%trans "Last news"%} {{site.title}} <span class="badge primary floatRa s0">بیشتر بخوانید</span></a></h2>
     <div class="f">
 
       <div class="c6 s12 pRa25">
-{%if lastPostsRecord.0.title%}
         <article class="wide">
-          <a href="{{url.base}}/{{lastPostsRecord.0.url}}">
-            <img src="{%if lastPostsRecord.0.meta.thumb%}{{lastPostsRecord.0.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.0.title}}">
-          </a>
-          <h2><a href="{{url.base}}/{{lastPostsRecord.0.url}}">{{lastPostsRecord.0.title}}</a></h2>
-          <p>{{lastPostsRecord.0.excerpt}}</p>
+          <a href="#"><img src="{{url.site}}/static//images/homepage/hostel.jpg" alt="اسکان رایگان ۱۱۰۰۰ زائر اولی در قم"></a>
+          <h2><a href="#">اسکان رایگان ۱۱۰۰۰ زائر اولی در قم</a></h2>
+          <p>از ابتدای فعالیت این مؤسسه تا کنون 11 هزار زائرکه عنوان زیارت اولی دارند، از سراسر کشور توانسته اند به حرم حضرت معصومه سلام الله علیها مشرف شوند و در این زائر سرا اسکان پیدا کنند.</p>
         </article>
-{%endif%}
       </div>
 
       <div class="c6 s12">
-{%if lastPostsRecord.1.title%}
         <article class="f mB25">
           <div class="c">
-            <h3><a href="{{url.base}}/{{lastPostsRecord.1.url}}">{{lastPostsRecord.1.title}}</a></h3>
-            <p class="s0 m0">{{lastPostsRecord.1.excerpt}}</p>
+            <h3><a href="{{url.base}}/news/sample">اجرای طرح زیارت اولی‌های حرم حضرت معصومه (س)</a></h3>
+            <p class="s0 m0">حجت‎الاسلام ثباتی با اشاره به نحوۀ شرکت در طرح زیارت اولیهای حرم حضرت معصومه (س) گفت: علاقه‎مندان زیارت حضرت با تشکیل کاروانی ۴۰ نفره به مدت دو روز و دو شب میهمان سفرۀ کریمۀ اهل‎‎بیت (ع) خواهند بود.</p>
           </div>
           <div class="c4 txtRa">
-            <a href="{{url.base}}/{{lastPostsRecord.1.url}}">
-              <img src="{%if lastPostsRecord.1.meta.thumb%}{{lastPostsRecord.1.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.1.title}}">
-            </a>
+            <a href="{{url.base}}/news/sample"><img src="{{url.site}}/static//images/homepage/news-sabati.jpg" alt="اجرای طرح زیارت اولی‌های حرم حضرت معصومه (س)"></a>
           </div>
         </article>
-{%endif%}
 
-{%if lastPostsRecord.2.title%}
         <article class="f mB25">
           <div class="c">
-            <h3><a href="{{url.base}}/{{lastPostsRecord.2.url}}">{{lastPostsRecord.2.title}}</a></h3>
-            <p class="s0 m0">{{lastPostsRecord.2.excerpt}}</p>
+            <h3><a href="#">پذیرش ۴۰۰ بانوی زیارت اولی در آستان بانوی کرامت</a></h3>
+            <p class="s0 m0">۴۰۰ بانوی زیارت اولی در هفته جاری و ایام منتسب به حضرت فاطمه معصومه سلام الله علیها به زیارت آستان مقدس بانوی کرامت مشرف شدند.</p>
           </div>
           <div class="c4 txtRa">
-            <a href="{{url.base}}/{{lastPostsRecord.2.url}}">
-              <img src="{%if lastPostsRecord.2.meta.thumb%}{{lastPostsRecord.2.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.2.title}}">
-            </a>
+            <a href="#"><img src="{{url.site}}/static//images/homepage/news-haram.jpg" alt="پذیرش ۴۰۰ بانوی زیارت اولی در آستان بانوی کرامت"></a>
           </div>
         </article>
-{%endif%}
 
-{%if lastPostsRecord.3.title%}
         <article class="f mB25">
           <div class="c">
-            <h3><a href="{{url.base}}/{{lastPostsRecord.3.url}}">{{lastPostsRecord.3.title}}</a></h3>
-            <p class="s0 m0">{{lastPostsRecord.3.excerpt}}</p>
+            <h3><a href="#">امكان زیارت رایگان حضرت معصومه(س) برای زائراولی ها</a></h3>
+            <p class="s0 m0">كسانی كه تا به حال به زیارت حضرت فاطمه معصومه(س) مشرف نشده اند، نام و نام خانوادگی خود را به شماره ۰۹۹۰۳۵۱۱۲۹۱ پیامك كنند تا شرایط سفر به زیارت آن حضرت (س) برایشان فراهم شود.</p>
           </div>
           <div class="c4 txtRa">
-            <a href="{{url.base}}/{{lastPostsRecord.3.url}}">
-              <img src="{%if lastPostsRecord.3.meta.thumb%}{{lastPostsRecord.3.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.3.title}}">
-            </a>
+            <a href="#"><img src="{{url.site}}/static//images/homepage/news-haram-view.jpg" alt="امكان زیارت رایگان حضرت معصومه(س) برای زائراولی ها"></a>
           </div>
         </article>
-{%endif%}
 
       </div>
     </div>
