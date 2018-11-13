@@ -7,7 +7,7 @@ body:not([data-page="homepage"]) .wrapper{background-color:#f2f2f2;}
 a{transition:0.3s;}
 
 /* header*/
-.site-header{height:60px;min-height:60px;font-size:1.2em;background-color:#15c5e5;transition:0.3s;position:relative;}
+.site-header{height:60px;min-height:60px;font-size:1.2em;background-color:#e52815;transition:0.3s;position:relative;}
 .site-header .title{transition:0.3s;padding:0;margin:0;display:inline-block;}
 .site-header .title h1{margin:0 0;line-height:60px;font-size:2.3em;font-weight:900}
 .site-header .title h1 a{color:#fff;font-weight:700;}
@@ -45,7 +45,7 @@ body.rtl[data-sidebar] #sitesidebar{left:0;}
 body.loading-page .site-header .title img{padding:7px;opacity:0.7}
 
 /* static pages design*/
-.page-title{padding:9em 0;text-align:center;overflow:hidden;background-color:#16badf;}
+.page-title{padding:9em 0;text-align:center;overflow:hidden;background-color:#ab1414;}
 .page-title h1{font-weight:700;line-height:2em;font-size:3.5em;color:#fff;overflow:hidden;text-overflow:ellipsis}
 .page-title h1 a{border-bottom:1px solid transparent}
 .page-title h1 a:hover{color:#eee;}
