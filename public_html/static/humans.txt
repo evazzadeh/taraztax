@@ -8,11 +8,10 @@ Proudly made in IRAN, powered by Saloos.
 	Twitter: @evazzadeh
 	Location: Iran
 
-	Mohammad Hasan Salehi HajiAbadi
-	Contact: itb.Baravak [at] gmail.com
-	Twitter: @baravak
+	Mohammad Reza Mohiti
+	Contact: rm.biqarar [at] gmail.com
+	Twitter: @biqarar
 	Location: Qom, Iran
-
 
 
 /* THANKS */
@@ -20,7 +19,7 @@ Proudly made in IRAN, powered by Saloos.
 
 
 /* SITE */
-	Last update: 28/05/2016
+	Last update: 01/01/2018
 	Version: 1.0.0
 	Language: Farsi / English
 	Doctype: HTML5
