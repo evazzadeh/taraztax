@@ -1,17 +1,22 @@
  <header class='site-header' data-scroll>
   <div class="cn">
-    <div class="title">
-     <h1>
-      <a href='{{url.base}}' tabindex='1'><span class="bold" title="{{site.desc}}">{{site.title}}</span></a>
-     </h1>
-     <h2><a href='{{url.base}}' tabindex='2'>{{site.desc}}</a></h2>
+    <div class="f">
+      <div class="c title">
+       <h1 class="compact">
+        <a href='{{url.base}}' tabindex='1' class="txtB" title="{{site.desc}}">{{site.title}}</a>
+       </h1>
+       <h2 class="compact"><a href='{{url.base}}' tabindex='2'>{{site.desc}}</a></h2>
+
+      </div>
+      <div class="cauto os">
+        <nav>
+        <a href="{{url.base}}/about">{%trans "About"%}</a>
+        <a href="{{url.base}}/contact" class="btn">{%trans "Contact"%}</a>
+        </nav>
+      </div>
     </div>
 
 
-   <nav class="floatRa">
-    <a href="{{url.base}}/about">{%trans "About"%}</a>
-    <a href="{{url.base}}/contact" class="btn">{%trans "Contact"%}</a>
-   </nav>
   </div>
   <a class="logo" href='{{url.base}}' tabindex='-1'>
    <img src='{{url.site}}/static/images/logo.png' alt='{{site.title}} | {{site.desc}}'>
