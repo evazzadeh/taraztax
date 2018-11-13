@@ -97,7 +97,7 @@ body.loading-page .site-header .title img{padding:7px;opacity:0.7}
   background-size: cover;
   /*background-repeat: no-repeat;*/
   /*background-color: #fff;*/
-  min-height: 500px;
+  min-height: 700px;
   color: #eee;
 }
 .txtDetail#introduction::before{
@@ -110,8 +110,8 @@ body.loading-page .site-header .title img{padding:7px;opacity:0.7}
   background-color: rgba(0,0,0,0.3);
 }
 .txtDetail#introduction .textBox{
-  width: 70%;
-  max-width: 700px;
+  width: 75%;
+  max-width: 800px;
   margin: 0 auto;
   z-index: 2;
   position: relative;
@@ -119,6 +119,20 @@ body.loading-page .site-header .title img{padding:7px;opacity:0.7}
   padding: 1em;
 }
 
+.txtDetail#about{
+  /*background-image: url("../images/festival/grid-me.png");*/
+  /*background-attachment: fixed;*/
+  color: #333;
+  padding-bottom: 5em;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjZjhkMjAzIj48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZjYyOSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZTUwMyIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg==");
+  font-size: 1.6em;
+}
+
+.txtDetail#about .cn{
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 1em;
+}
 
 
 
