@@ -1,0 +1,30 @@
+ <header class='site-header' data-scroll>
+  <div class="cn">
+    <div class="title">
+     <h1>
+      <a href='{{url.base}}' tabindex='1'><span class="bold" title="{{site.desc}}">{{site.title}} {%if lang.current == 'fa'%} <small>سلام الله علیها</small>{%endif%}</span></a>
+     </h1>
+     <h2><a href='{{url.base}}' tabindex='2'>{{site.desc}}</a></h2>
+    </div>
+
+
+   <nav class="floatRa">
+    <a href="{{url.base}}/about">{%trans "About"%}</a>
+    <a href="{{url.base}}/a" data-direct>ثبت‌نام تشرف یا خادمی</a>
+    <a href="{{url.base}}/donate" class="btn">{%trans "Donate"%}</a>
+   </nav>
+  </div>
+  <a class="logo" href='{{url.base}}' tabindex='-1'>
+   <img src='{{url.site}}/static/images/logo.png' alt='{{site.title}} | {{site.desc}}'>
+  </a>
+ </header>
+
+<div id="sitesidebarHandler"></div>
+<aside id='sitesidebar' class="unselectable scr">
+  <ul class="sidenav" data-xhr="sidenav">
+    <li><a tabindex='-1' href="{{url.base}}">صفحه نخست</a></li>
+    <li><a tabindex='-1' href="{{url.base}}/about">درباره موسسه</a></li>
+    <li><a tabindex='-1' href="{{url.base}}/donate">پرداخت کمک نقدی</a></li>
+    <li><a tabindex='-1' href="{{url.base}}/a" data-direct>ثبت‌نام تشرف یا خادمی</a></li>
+  </ul>
+</aside>

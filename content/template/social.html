@@ -1,0 +1,36 @@
+<nav class="share1">
+{%if social.facebook%}
+  <a data-direct target='_blank' href="https://www.facebook.com/{{social.facebook}}" class="facebook">{{site.title}} facebook</a>
+{%endif%}
+{%if social.twitter%}
+  <a data-direct target='_blank' href="https://twitter.com/{{social.twitter}}" class="twitter">{{site.title}} twitter</a>
+{%endif%}
+{%if social.googleplus%}
+  <a data-direct target='_blank' href="https://plus.google.com/{{social.googleplus}}" class="googleplus">{{site.title}} google+</a>
+{%endif%}
+{%if social.telegram%}
+  <a data-direct target='_blank' href="https://t.me/{{social.telegram}}" class="telegram" title='تلگرام'>{{site.title}} telegram</a>
+{%endif%}
+{%if social.instagram%}
+  <a data-direct target='_blank' href="https://instagram.com/{{social.instagram}}" class="instagram" title='اینستاگرام'>{{site.title}} instagram</a>
+{%endif%}
+{%if social.linkedin%}
+  <a data-direct target='_blank' href="https://www.linkedin.com/{{social.linkedin}}" class="linkedin">{{site.title}} linkedin</a>
+{%endif%}
+{%if social.aparat%}
+  <a data-direct target='_blank' href="https://www.aparat.com/{{social.aparat}}" class="aparat" title='آپارات'>
+    <img src="{{url.site}}/static/images/homepage-v2/share/aparat_64.png" alt="aparat">
+  </a>
+{%endif%}
+  <a data-direct target='_blank' href="https://eitaa.com/mhkhadije" class="aparat" title='ایتا'>
+    <img src="{{url.site}}/static/images/homepage-v2/share/eitaa.png" alt="eitaa">
+  </a>
+  <a data-direct target='_blank' href="https://sapp.ir/mhkhadije" class="aparat" title='سروش'>
+    <img src="{{url.site}}/static/images/homepage-v2/share/soroush.png" alt="soroush">
+  </a>
+
+{%if false%}
+  <a data-direct target='_blank' href="{{url.base}}/rss" class="rss">{{site.title}} rss</a>
+{%endif%}
+
+</nav>
