@@ -9,22 +9,15 @@
 
  {{block('introduction')}}
  {{block('about')}}
- {{block('law')}}
-
-
-
- {{block('thinking')}}
-
-
- {{block('donate2')}}
-
-
-
-
- {{block('statistic')}}
  {{block('lastNews')}}
-
+ {{block('law')}}
  {{block('quote')}}
+
+
+
+
+
+
  {{block('address2')}}
  {{block('certificates')}}
 
@@ -86,56 +79,6 @@
 
 
 
-{%block thinking%}
-<section id='thinkingTile'>
-  <div class="cn">
-    <h3>{%trans "Do you know?"%}</h3>
-    <p>هزاران نفر در سراسر کشور عزیزمان تاکنون به زیارت امام رضا ع و حضرت معصومه س مشرف نشده‌اند و آرزوی زیارت این بزرگان را دارند؟</p>
-    <p>طبق بررسی‌های صورت گرفته فقط در استان قم بیش از ۵هزار نفر ساکن این استان تاکنون حتی یکبار هم به حرم حضرت معصومه سلام الله علیها مشرف نشده‌اند!</p>
-    <p>
-      <a href="{{url.base}}a/trip" class="btn light outline mB20" data-direct>{%trans "Family trip signup"%}</a>
-      <a href="{{url.base}}a/group" class="btn light outline mB20" data-direct>{%trans "Group trip signup"%}</a>
-      <a href="{{url.base}}/donate" class="btn light outline mB20">{%trans "Donate"%}</a>
-
-    </p>
-  </div>
-</section>
-{%endblock%}
-
-
-{%block statistic%}
-<section id='statisticTile'>
-  <div class="cn">
-  <h2 class="txtC mB25">آمار زائر اولیها در {{site.title}}</h2>
-   <div class="f">
-    <div class="c">
-     <div class="statistic">
-       <div class="label hide"><span class="sf-card"></span></div>
-       <div class="value">{{16000 | number_format | fitNumber}}</div>
-       <div class="label">{%trans "Qom"%}</div>
-     </div>
-    </div>
-
-    <div class="cauto">
-     <div class="statistic">
-       <div class="label hide"><span class="sf-users"></span></div>
-       <div class="value">{{2000 | number_format | fitNumber}}</div>
-       <div class="label">{%trans "Mashhad"%}</div>
-     </div>
-    </div>
-
-    <div class="c">
-     <div class="statistic">
-       <div class="label hide"><span class="sf-exchange"></span></div>
-       <div class="value">{{110 | number_format | fitNumber}}</div>
-       <div class="label">{%trans "Karbala"%}</div>
-     </div>
-    </div>
-
-   </div>
-  </div>
-</section>
-{%endblock%}
 
 
 {%block certificates%}
@@ -173,10 +116,10 @@
 <div class='quoteTile'>
   <div class="cn">
    <article class="quote-person">
-    <p>همانا قم کوفه کوچک است. آگاه باشید که بهشت هشت در دارد که سه در از آنها برای قم است. بانویی از اولاد من در آنجا از دنیا میرود که نامش فاطمه دختر موسی است و با شفاعت این بانو تمام شیعیان وارد بهشت خواهند شد.</p>
+    <p>انجام امور مالیاتی و رفع مشکل بیمه تامین اجتماعی که حسابی داشت از ما وقت و انرژی می‌گرفت نشان‌دهنده کیفیت خدمات ارائه شده توسط شرکت حسابداری ترازسازان نفیس هست که منجر به ادامه همکاری ما شد.</p>
     <div class="author f">
-     <h4 class="c">امام صادق علیهم السلام</h4>
-     <abbr class="cauto os">بحارالانوار، ج٥٧، ص٢٢٨</abbr>
+     <h4 class="c"><a href="https://evazzadeh.com" target="_blank">جواد عوض زاده</a></h4>
+     <abbr class="cauto os"><a href="https://ermile.com" target="_blank">مدیر عامل ارمایل</a></abbr>
     </div>
    </article>
  </div>
