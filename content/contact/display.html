@@ -1,0 +1,121 @@
+{%extends display.main%}
+
+
+{%block pageData%}
+
+
+{{block ("gMapLive")}}
+
+  <hr>
+  <p class="msg txtC simple">{%trans "We do our best to improve our service quality. So, knowing your valuable comments will help us in this way."%}</p>
+
+   <div class="f">
+    <div class="c5 s12 pRa10">
+      {{block ("Address")}}
+    </div>
+    <div class="c7 s12">
+      {{block ("ContactForm")}}
+    </div>
+   </div>
+
+{%endblock%}
+
+
+
+
+{%block gMapLive%}
+<iframe class="gMap mB25" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.8681831929307!2d50.86600886158736!3d34.632771253402424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f93bb606e2a7f8f%3A0xaa7dfa711fb708b6!2z2K7bjNix24zZhyDYrdi22LHYqiDYrtiv24zYrNmH!5e0!3m2!1sen!2sae!4v1528523095280" height="400" frameborder="0" allowfullscreen></iframe>
+{%endblock%}
+
+
+{%block gMap%}
+    <a href="https://goo.gl/maps/eFG7LEZBTRp" target="_blank" class="map">
+     <img src="{{url.site}}/static/images/cert/khadije-map-wide.png">
+    </a>
+{%endblock%}
+
+
+
+
+{%block Address%}
+       <address class="vcard mB10">
+        <div class="author author_name hide"><span class="fn">{{site.title}}</span></div>
+        <div class="adr">
+{%if lang.current =='en'%}
+          <div class="extended-address">{%trans "Najmeh Shabestan"%}</div>
+          <div class="street-address">{%trans "Najmeh Park, Fatemi St"%}</div>
+          <div class="locality">{%trans "Qom"%}</div>
+          <div class="country-name">{%trans "Iran"%}</div>
+{%else%}
+          <div class="country-name">{%trans "Iran"%}</div>
+          <div class="locality">{%trans "Qom"%}</div>
+          <div class="street-address">{%trans "Najmeh Park, Fatemi St"%}</div>
+          <div class="extended-address">{%trans "Najmeh Shabestan"%}</div>
+{%endif%}
+          <div class="postal-code">{{"37156-53142" | fitNumber }}</div>
+        </div>
+        <div class="email ltr">taraztax@gmail.com</div>
+        <a class="tel ltr" href="tel:+982537740357">{{"(+98) 25" | fitNumber}} {{"3774 0357" | fitNumber}}</a>
+        <a class="tel ltr" href="tel:+982537740358">{{"(+98) 25" | fitNumber}} {{"3774 0358" | fitNumber}}</a>
+       </address>
+{%endblock%}
+
+
+
+{%block ContactForm%}
+  <form method="post" data-clear autocomplete="off">
+{%if login and false%}
+{%else%}
+    <div class="f">
+      <div class="c s12 mB5 pRa5">{{block ("iName")}}</div>
+      <div class="c s12 mB5">{{block ("iMobile")}}</div>
+      <input type="text" name="username" class="hide" value="">
+    </div>
+{%endif%}
+    <div class="f">
+      <div class="c">{{block ("iMsg")}}</div>
+    </div>
+    <div class="f">
+      <div class="c">{{block ("iSubmit")}}</div>
+    </div>
+  </form>
+{%endblock%}
+
+
+{%block iName%}
+    <div class="input">
+     <label class="addon" for="name">{%trans "Name"%}</label>
+     <input type="text" name="name" id="name" placeholder='{%trans "Full Name"%}' maxlength='40' value="{{user.displayname}}">
+    </div>
+{%endblock%}
+
+
+{%block iMobile%}
+    <div class="input">
+     <label class="addon" for="mobile">{%trans "Mobile"%}</label>
+     <input type="tel" name="mobile" id="mobile" placeholder='{%trans "Mobile"%}' maxlength="13" autocomplete="off" data-validity='{%trans "Please enter valid mobile number. `:val` is incorrect"%}' value="{{user.mobile}}">
+    </div>
+{%endblock%}
+
+
+{%block iEmail%}
+    <div class="input">
+     <label class="addon" for="email">{%trans "Email"%}</label>
+     <input type="email" name="email" id="email" placeholder='mail@example.com' maxlength='40'>
+    </div>
+{%endblock%}
+
+
+{%block iMsg%}
+    <textarea class="c txt mT5" name="content" placeholder='{%trans "Your Message"%}' rows="8" minlength="5" maxlength="1000" data-resizable></textarea>
+{%endblock%}
+
+
+{%block iSubmit%}
+    <div class="input mTB10">
+     <button type="submit" name="submit-contact" class="btn block primary">{%trans "Send"%}</button>
+    </div>
+{%endblock%}
+
+
+
