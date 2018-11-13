@@ -123,54 +123,77 @@
 
 
 {%block lastNews%}
+{%set lastPostsRecord = posts({"limit" : 4})%}
+{%if lastPostsRecord.0%}
 <section id='lastNewsBox' class="news">
-  <h2 class="hide">{%trans "Last news"%} {{site.title}}</h2>
+{%set defaultImage  = url.site ~ "/static/images/news-default.jpg" %}
+
+
   <div class="cn">
+    <h2><a href="{{url.base}}/blog">{%trans "Last news"%} {{site.title}} <span class="badge primary floatRa s0">بیشتر بخوانید</span></a></h2>
     <div class="f">
 
       <div class="c6 s12 pRa25">
+{%if lastPostsRecord.0.title%}
         <article class="wide">
-          <a href="#"><img src="{{url.site}}/static//images/homepage/hostel.jpg" alt="اسکان رایگان ۱۱۰۰۰ زائر اولی در قم"></a>
-          <h2><a href="#">اسکان رایگان ۱۱۰۰۰ زائر اولی در قم</a></h2>
-          <p>از ابتدای فعالیت این مؤسسه تا کنون 11 هزار زائرکه عنوان زیارت اولی دارند، از سراسر کشور توانسته اند به حرم حضرت معصومه سلام الله علیها مشرف شوند و در این زائر سرا اسکان پیدا کنند.</p>
+          <a href="{{url.base}}/{{lastPostsRecord.0.url}}">
+            <img src="{%if lastPostsRecord.0.meta.thumb%}{{lastPostsRecord.0.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.0.title}}">
+          </a>
+          <h2><a href="{{url.base}}/{{lastPostsRecord.0.url}}">{{lastPostsRecord.0.title}}</a></h2>
+          <p>{{lastPostsRecord.0.excerpt}}</p>
         </article>
+{%endif%}
       </div>
 
       <div class="c6 s12">
+{%if lastPostsRecord.1.title%}
         <article class="f mB25">
           <div class="c">
-            <h3><a href="{{url.kingdom}}/news/sample">اجرای طرح زیارت اولی‌های حرم حضرت معصومه (س)</a></h3>
-            <p class="s0 m0">حجت‎الاسلام ثباتی با اشاره به نحوۀ شرکت در طرح زیارت اولیهای حرم حضرت معصومه (س) گفت: علاقه‎مندان زیارت حضرت با تشکیل کاروانی ۴۰ نفره به مدت دو روز و دو شب میهمان سفرۀ کریمۀ اهل‎‎بیت (ع) خواهند بود.</p>
+            <h3><a href="{{url.base}}/{{lastPostsRecord.1.url}}">{{lastPostsRecord.1.title}}</a></h3>
+            <p class="s0 m0">{{lastPostsRecord.1.excerpt}}</p>
           </div>
           <div class="c4 txtRa">
-            <a href="{{url.kingdom}}/news/sample"><img src="{{url.site}}/static//images/homepage/news-sabati.jpg" alt="اجرای طرح زیارت اولی‌های حرم حضرت معصومه (س)"></a>
+            <a href="{{url.base}}/{{lastPostsRecord.1.url}}">
+              <img src="{%if lastPostsRecord.1.meta.thumb%}{{lastPostsRecord.1.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.1.title}}">
+            </a>
           </div>
         </article>
+{%endif%}
 
+{%if lastPostsRecord.2.title%}
         <article class="f mB25">
           <div class="c">
-            <h3><a href="#">پذیرش ۴۰۰ بانوی زیارت اولی در آستان بانوی کرامت</a></h3>
-            <p class="s0 m0">۴۰۰ بانوی زیارت اولی در هفته جاری و ایام منتسب به حضرت فاطمه معصومه سلام الله علیها به زیارت آستان مقدس بانوی کرامت مشرف شدند.</p>
+            <h3><a href="{{url.base}}/{{lastPostsRecord.2.url}}">{{lastPostsRecord.2.title}}</a></h3>
+            <p class="s0 m0">{{lastPostsRecord.2.excerpt}}</p>
           </div>
           <div class="c4 txtRa">
-            <a href="#"><img src="{{url.site}}/static//images/homepage/news-haram.jpg" alt="پذیرش ۴۰۰ بانوی زیارت اولی در آستان بانوی کرامت"></a>
+            <a href="{{url.base}}/{{lastPostsRecord.2.url}}">
+              <img src="{%if lastPostsRecord.2.meta.thumb%}{{lastPostsRecord.2.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.2.title}}">
+            </a>
           </div>
         </article>
+{%endif%}
 
+{%if lastPostsRecord.3.title%}
         <article class="f mB25">
           <div class="c">
-            <h3><a href="#">امكان زیارت رایگان حضرت معصومه(س) برای زائراولی ها</a></h3>
-            <p class="s0 m0">كسانی كه تا به حال به زیارت حضرت فاطمه معصومه(س) مشرف نشده اند، نام و نام خانوادگی خود را به شماره ۰۹۹۰۳۵۱۱۲۹۱ پیامك كنند تا شرایط سفر به زیارت آن حضرت (س) برایشان فراهم شود.</p>
+            <h3><a href="{{url.base}}/{{lastPostsRecord.3.url}}">{{lastPostsRecord.3.title}}</a></h3>
+            <p class="s0 m0">{{lastPostsRecord.3.excerpt}}</p>
           </div>
           <div class="c4 txtRa">
-            <a href="#"><img src="{{url.site}}/static//images/homepage/news-haram-view.jpg" alt="امكان زیارت رایگان حضرت معصومه(س) برای زائراولی ها"></a>
+            <a href="{{url.base}}/{{lastPostsRecord.3.url}}">
+              <img src="{%if lastPostsRecord.3.meta.thumb%}{{lastPostsRecord.3.meta.thumb}}{%else%}{{defaultImage}}{%endif%}" alt="{{lastPostsRecord.3.title}}">
+            </a>
           </div>
         </article>
+{%endif%}
 
       </div>
     </div>
   </div>
 </section>
+{%endif%}
+
 {%endblock%}
 
 
