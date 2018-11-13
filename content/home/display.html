@@ -7,6 +7,10 @@
 
 {%block content%}
 
+ {{block('introduction')}}
+
+
+
  {{block('about')}}
  {{block('thinking')}}
 
@@ -32,6 +36,21 @@
 {%block landPage%}
 <div id='landing'></div>
 {%endblock%}
+
+
+
+
+{%block introduction%}
+<section class="txtDetail" id='introduction'>
+  <div class="textBox" data-aos="fade-up" data-aos-delay="100">
+    <h2><a href="{{url.that}}#introduction">خدمات حسابداری</a></h2>
+    <p>کسب‌وکارها در هر نوع و اندازه‌ای به اطلاعات مالی دقیق از فعالیت‌های روزانه احتیاج دارند تا بتوانند از فرصت‌ها بهره‌برداری کنند و سودآوری بیشتری داشته باشند، همچنین تهدیدات مالی رو قبل از اینکه به بحران تبدیل شوند شناسایی کنند.
+    <br> ما متخصصان حسابداری خود را در اختیار شما می‌گذاریم تا شما بتوانید بر ساختن یک کسب وکار قدرتمند تمرکز کنید.</p>
+  </div>
+</section>
+{%endblock%}
+
+
 
 
 {%block about%}
