@@ -120,16 +120,20 @@ body.loading-page .site-header .title img{padding:7px;opacity:0.7}
 }
 
 .txtDetail#about{
-  /*background-image: url("../images/festival/grid-me.png");*/
-  /*background-attachment: fixed;*/
+  background-attachment: fixed;
   color: #333;
   padding-bottom: 5em;
-  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjZjhkMjAzIj48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZjYyOSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZTUwMyIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg==");
   font-size: 1.6em;
+  background-image: url("../images/homepage/boss.jpg");
+  background-position: center;
+  background-size: cover;
+  /*background-repeat: no-repeat;*/
+  /*background-color: #fff;*/
+  min-height: 500px;
 }
 
 .txtDetail#about .cn{
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(255,255,255,0.1);
   color: #fff;
   padding: 1em;
 }
@@ -164,9 +168,22 @@ body.loading-page .site-header .title img{padding:7px;opacity:0.7}
   padding: 1em;
 }
 
+.txtDetail#map{
+  padding:0;
+  background-color: #ddd;
+}
+.txtDetail#map iframe{
+  display: block;
+  width: 100%!important;
+  height: 300px!important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
 
-#certificateTile{background-color:#444;padding:5em 0;text-align:center;font-size:1.4em}
-#certificateTile h3{color:#eee;margin-top:1.5em}
+#certificateTile{background-color:#eee;padding:5em 0;text-align:center;font-size:1.4em}
+#certificateTile h3{color:#777;margin-top:1.5em}
 #certificateTile nav a{margin:.5em;display:inline-block;border-color:#2fbfdf}
 #certificateTile nav a:hover img{border-color:#2fbfdf}
 #certificateTile nav a img{height:6em;min-width:6em;width:auto;overflow:hidden;border-radius:3px;background-color:#102e5d;transition:.3s;border:1px solid transparent}

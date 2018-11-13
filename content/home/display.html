@@ -8,17 +8,15 @@
 {%block content%}
 
  {{block('introduction')}}
- {{block('about')}}
+
  {{block('lastNews')}}
- {{block('law')}}
+ {{block('about')}}
+
  {{block('quote')}}
+ {{block('law')}}
 
+ {{block('addressMap')}}
 
-
-
-
-
- {{block('address2')}}
  {{block('certificates')}}
 
 
@@ -54,8 +52,9 @@
       <h2><a href="{{url.that}}#about">تصور غلط</a></h2>
       <p class="msg danger">تصور غلط برخی از شرکت‌ها این است که اعزام یک حسابدار به‌صورت تمام‌وقت سبب می‌شود که کارها بهتر و دقیق‌تر انجام شود و شرایط بیشتر تحت کنترل باشد.</p>
       <p> اما امروزه با گسترش ارتباطات، دیگر نیازی به حضور یک حسابدار یا مدیر مالی تمام‌وقت در شرکت نیست. شما برای بهره‌گیری از یک تیم خدمات حسابداری متشکل از افراد خبره در این زمینه می‌توانید از تخصص چندین نفر با کمترین هزینه بهره ببرید. در این حالت دپارتمان حسابداری شرکتِ شما را چندین نفر پیش می‌برند که هریک در ‌بخشی از این خدمات متخصص هستند اما در واقع هزینه نهایی کمتر از حالتی می‌شود که یک یا چند نفر به‌صورت تمام وقت به شرکت شما اعزام و مشغول به کار شوند.</p>
+      <p>ما با بررسی و تحلیل وضعیت شرکت شما و همچنین تحلیل محیط صنعتی که در آن به فعالیت مشغولید، ریسک تصمیمات مالی شما را به حداقل خواهیم رساند. خدمت مشاوره مالی ما به شما کمک خواهد کرد که نه‌تنها از اشتباهات جلوگیری کنید بلکه فرصت‌های پیش‌رویتان را شناسایی و از آنها بیشترین استفاده را ببرید.</p>
       <p>با تجربه سربلندی در صدها پرونده مالیاتی با موضوعات مختلف، می‌توانیم نقشه راه مالیاتی شرکت شما به گونه‌ای ترسیم کنیم که در امن‌ترین مسیر مالیاتی حرکت کنید. همچنین با رعایت کامل قوانین مالیاتی کشور و استفاده از تمامی راهکارها و دستورالعمل‌های آن، مالیات بنگاه اقتصادی شما را به حداقل خواهیم رساند.</p>
-      <p class="msg">در هر صنفی که هستید، امور مالیاتی کسب‌وکارتان را به متخصصان موسسه خدمات مالی حسابداری ما بسپارید.</p>
+      <p class="msg success">در هر صنفی که هستید، امور مالیاتی کسب‌وکارتان را به متخصصان موسسه خدمات مالی حسابداری ما بسپارید.</p>
     </div>
   </div>
 </section>
@@ -85,7 +84,7 @@
 <section id='certificateTile'>
   <div class="cn">
     <div class="f">
-      <div class="c s12"><h3>{%trans "license and supporters"%}</h3></div>
+      <div class="c s12"><h3>مجوز و گواهینامه‌ها</h3></div>
       <div class="cauto s12">
        <nav>
          <a href="{{url.base}}/certificate" title='عضو رسمی انجمن حسابداران'><img src="{{url.site}}/static/images/cert/iacpa.png" alt='عضو رسمی انجمن حسابداران'></a>
@@ -99,16 +98,13 @@
 {%endblock%}
 
 
-{%block address%}
-<a id='addressTile' href="{{url.base}}/contact"></a>
-{%endblock%}
-
-
-{%block donate%}
-<section class="tile">
- <h2>Donate</h2>
+{%block addressMap%}
+<section class="txtDetail" id="map">
+  <iframe src="https://maps.google.com/maps?width=100%&amp;height=300&amp;hl=en&amp;q=ermile+(Ermile)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 </section>
 {%endblock%}
+
+
 
 
 {%block quote%}
