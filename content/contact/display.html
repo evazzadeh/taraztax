@@ -1,7 +1,7 @@
 {%extends display.main%}
 
 
-{%block pageData%}
+{%block page%}
 
 
 {{block ("gMapLive")}}
@@ -24,7 +24,7 @@
 
 
 {%block gMapLive%}
-<iframe class="gMap mB25" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.8681831929307!2d50.86600886158736!3d34.632771253402424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f93bb606e2a7f8f%3A0xaa7dfa711fb708b6!2z2K7bjNix24zZhyDYrdi22LHYqiDYrtiv24zYrNmH!5e0!3m2!1sen!2sae!4v1528523095280" height="400" frameborder="0" allowfullscreen></iframe>
+<iframe class="gMap mB25" src="https://maps.google.com/maps?width=100%&amp;height=300&amp;hl=en&amp;q=ermile+(Ermile)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 {%endblock%}
 
 
@@ -41,22 +41,14 @@
        <address class="vcard mB10">
         <div class="author author_name hide"><span class="fn">{{site.title}}</span></div>
         <div class="adr">
-{%if lang.current =='en'%}
-          <div class="extended-address">{%trans "Najmeh Shabestan"%}</div>
-          <div class="street-address">{%trans "Najmeh Park, Fatemi St"%}</div>
-          <div class="locality">{%trans "Qom"%}</div>
-          <div class="country-name">{%trans "Iran"%}</div>
-{%else%}
           <div class="country-name">{%trans "Iran"%}</div>
           <div class="locality">{%trans "Qom"%}</div>
-          <div class="street-address">{%trans "Najmeh Park, Fatemi St"%}</div>
-          <div class="extended-address">{%trans "Najmeh Shabestan"%}</div>
-{%endif%}
-          <div class="postal-code">{{"37156-53142" | fitNumber }}</div>
+          <div class="street-address">انسجام، ۲۴ متری عدالت</div>
+          <div class="extended-address">نبش کوچه ۱۰۷</div>
+          <div class="postal-code">{{"37156-12345" | fitNumber }}</div>
         </div>
         <div class="email ltr">taraztax@gmail.com</div>
-        <a class="tel ltr" href="tel:+982537740357">{{"(+98) 25" | fitNumber}} {{"3774 0357" | fitNumber}}</a>
-        <a class="tel ltr" href="tel:+982537740358">{{"(+98) 25" | fitNumber}} {{"3774 0358" | fitNumber}}</a>
+        <a class="tel ltr" href="tel:+982532891878">{{"(+98) 25" | fitNumber}} {{"32891878" | fitNumber}}</a>
        </address>
 {%endblock%}
 
