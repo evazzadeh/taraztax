@@ -5,9 +5,9 @@ class view
 {
 	public static function config()
 	{
-		\dash\data::site_title(T_("Taraz Tax"));
-		\dash\data::site_desc(T_("Do your tax job in Iran"));
-		\dash\data::site_slogan(T_('be relax with us in your tax problems!'));
+		\dash\data::site_title('خدمات حسابداری ترازسازان نفیس');
+		\dash\data::site_desc('دیگر نیازی نیست زمان و هزینه‌ زیادی را صرف محاسبات و مشکلات حسابداری کنید. کارشناسان خبره ما این مشکل را برای شما حل کرده‌اند.');
+		\dash\data::site_slogan('سرو کله زدن با مالیات رو به ما بسپارید');
 
 		\dash\data::page_desc(\dash\data::site_desc(). ' | '. \dash\data::site_slogan());
 
