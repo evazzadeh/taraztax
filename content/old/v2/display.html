@@ -2,7 +2,7 @@
 
 
 {%block head_css%}
- <link rel="stylesheet"       href="{{url.site}}/static/{{'css/style-old-v2.css' | filemtime(true)}}">
+ <link rel="stylesheet"       href="{{url.static}}/{{'css/style-old-v2.css' | filemtime(true)}}">
 {%endblock%}
 
 {%block beforeHeader1%}
@@ -47,7 +47,7 @@
 
 {%block harameyn2%}
 <div id='harameyn2'>
-  <img src="{{url.site}}/static/images/homepage-v2/harameyn.jpg" alt="{{site.title}}">
+  <img src="{{url.static}}/images/homepage-v2/harameyn.jpg" alt="{{site.title}}">
 </div>
 {%endblock%}
 
@@ -66,7 +66,7 @@
 
         <div class="f">
           <div class="c12">
-            <a href="{{url.base}}/a/trip" class="btn xl block primary outline mB10 sahargahan" data-direct ><img src="{{url.site}}/static/images/homepage-v2/sahargahan.png" alt="سحرگهان حرم">برنامه سحرگهان حرم حضرت معصومه سلام الله علیها </a>
+            <a href="{{url.base}}/a/trip" class="btn xl block primary outline mB10 sahargahan" data-direct ><img src="{{url.static}}/images/homepage-v2/sahargahan.png" alt="سحرگهان حرم">برنامه سحرگهان حرم حضرت معصومه سلام الله علیها </a>
           </div>
           <div class="c12">
             <a href="{{url.base}}/a/group" class="btn block primary outline mB10" data-direct>{%trans "Group trip signup"%}</a>
@@ -78,7 +78,7 @@
         <div class="homepageBook">
           <a href="{{url.base}}/mylovestory" title='{%trans "Click to go to download page"%}'>
             <h2>{%trans "Download love story book"%}</h2>
-            <img src="{{url.site}}/static/images/book/majaraye-eshge-man.jpg" alt='{{page.title}}'>
+            <img src="{{url.static}}/images/book/majaraye-eshge-man.jpg" alt='{{page.title}}'>
           </a>
         </div>
 
@@ -107,7 +107,7 @@
         <h3>فرازی از وصیت نامه شهید مدافع حرم، مهدی ایمانی</h3>
       </div>
       <div class="c3 s12">
-        <img src="{{url.site}}/static/images/homepage-v2/mahdi-imani.jpg" alt='{%trans "Shahid Mahdi Imani"%}'>
+        <img src="{{url.static}}/images/homepage-v2/mahdi-imani.jpg" alt='{%trans "Shahid Mahdi Imani"%}'>
       </div>
     </div>
   </div>
@@ -176,7 +176,7 @@
     <p>خدمت به زائران اهل بیت علیهم السلام از آرزوهای  بسیاری از مومنین و مومنان است</p>
     <p>موسسه حضرت خدیجه س آماده همکاری با خادمین محترم میباشد</p>
     <p></p>
-    <p><a href="{{url.base}}/khadem" class="btn secondary hauto"><img src="{{url.site}}/static/images/homepage-v2/nosrati-lakom-moado.png"></a></p>
+    <p><a href="{{url.base}}/khadem" class="btn secondary hauto"><img src="{{url.static}}/images/homepage-v2/nosrati-lakom-moado.png"></a></p>
   </div>
 </section>
 {%endblock%}
@@ -240,10 +240,10 @@
       <div class="c s12"><h3>{%trans "license and supporters"%}</h3></div>
       <div class="cauto s12">
        <nav>
-         <a href="{{url.base}}/certificate"><img src="{{url.site}}/static/images/cert/farhang.png" alt='{%trans "Certificate"%}'></a>
-         <a href="{{url.base}}/certificate"><img src="{{url.site}}/static/images/cert/masajed.png" alt='{%trans "Certificate"%}'></a>
-         <a href="{{url.base}}/certificate" class="hide"><img src="{{url.site}}/static/images/cert/enamad1.png" alt='{%trans "Certificate"%}'></a>
-         <a href="https://arvancloud.com" title='{%trans "Secured by Arvancloud"%}' target="_blank"><img src="{{url.site}}/static/images/cert/arvancloud.png" alt='{%trans "Arvancloud"%}'></a>
+         <a href="{{url.base}}/certificate"><img src="{{url.static}}/images/cert/farhang.png" alt='{%trans "Certificate"%}'></a>
+         <a href="{{url.base}}/certificate"><img src="{{url.static}}/images/cert/masajed.png" alt='{%trans "Certificate"%}'></a>
+         <a href="{{url.base}}/certificate" class="hide"><img src="{{url.static}}/images/cert/enamad1.png" alt='{%trans "Certificate"%}'></a>
+         <a href="https://arvancloud.com" title='{%trans "Secured by Arvancloud"%}' target="_blank"><img src="{{url.static}}/images/cert/arvancloud.png" alt='{%trans "Arvancloud"%}'></a>
        </nav>
       </div>
     </div>
