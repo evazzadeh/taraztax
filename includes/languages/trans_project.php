@@ -23,11 +23,11 @@ class twigTransTerms
 	echo T_("Developed by Ermile");                                                   // Line 50
 
 	//---------------------------------------------------content/template/dafault.html
-	echo T_("For share via social networks");                                         // Line 40
-	echo T_("News Code");                                                             // Line 40
-	echo T_("Download");                                                              // Line 77
-	echo T_("PDF");                                                                   // Line 77
-	echo T_("Comment");                                                               // Line 123
+	echo T_("For share via social networks");                                         // Line 42
+	echo T_("News Code");                                                             // Line 42
+	echo T_("Download");                                                              // Line 80
+	echo T_("PDF");                                                                   // Line 80
+	echo T_("Comment");                                                               // Line 126
 	echo T_("Name");                                                                  // Line 79
 	echo T_("Full Name");                                                             // Line 80
 	echo T_("Please enter valid mobile number. `:val` is incorrect");                 // Line 88
