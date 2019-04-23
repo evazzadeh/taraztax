@@ -15,8 +15,8 @@ self::$language =
 /**
  * system default lanuage
  */
-self::$config['site']['title']         = "Taraz Tax";
-self::$config['site']['desc']          = "Do your tax job in Iran";
+self::$config['site']['title']         = "شرکت حسابداری ترازسازان نفیس";
+self::$config['site']['desc']          = "انجام امور مالیاتی";
 self::$config['site']['slogan']        = "be relax with us in your tax problems!";
 
 self::$config['debug']                 = true;
