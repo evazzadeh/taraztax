@@ -407,7 +407,7 @@ body.loading-page .site-header .title img{padding:7px;opacity:0.7}
 .gallery2 video{width:500px;max-width:90%;margin:1em auto;display:inline-block;}
 .gallery2 audio{width:250px;max-width:90%;margin:1em auto;display:inline-block;}
 
-.postListPreview{width:70%;min-width:280px;margin:0 auto;}
+.postListPreview{width:70%;min-width:280px;margin:0 auto;padding:5em 0}
 .postListPreview section{border-bottom:1px dashed #ccc;margin-bottom:3em;}
 .postListPreview img{}
 .postListPreview h3{margin-top:0;}
