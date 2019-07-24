@@ -1,9 +1,9 @@
 {
   "name": "TarazTax",
   "version": "1.0.0",
-  "homepage": "https://taraztax.com",
+  "homepage": "https://taraztax.ir",
   "dependencies": {
     "siftal": "^6.9.0",
-    "dash": "^18.0.0",
+    "dash": "^18.0.0"
   }
 }
